@@ -1,7 +1,7 @@
 {
-  "name": "boilermaker",
+  "name": "needles-and-cones",
   "version": "2.0.0",
-  "description": "Some boilerplate code to get you started - get shakin'!",
+  "description": "A site to help you identify pine trees in Massachusetts",
   "engines": {
     "node": "~12.11.1"
   },
