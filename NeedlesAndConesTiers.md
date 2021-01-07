@@ -16,7 +16,7 @@ As a logged-in user, I want to be able to:
 * add special notes to my page about each tree
 * no one else should be able to edit this page except for me.
 
-As an administrator, I want to be able to"
+As an administrator, I want to be able to:
 
 * have validated data to ensure reliability
 
