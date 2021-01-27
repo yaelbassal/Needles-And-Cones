@@ -26,7 +26,7 @@ form div {
 .navbar {
   display: flex;
   background-color: rgb(245, 242, 242);
-  padding: 1em;
+  padding-right: 20px;
   justify-content: space-between;
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
