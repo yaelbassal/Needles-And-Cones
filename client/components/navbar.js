@@ -11,9 +11,9 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         {/* must add route when i decide where it should go! */}
         <Link to="/">
           <img
-            src="/NeedlesAndConesLogo.png"
-            height="50"
-            width="50"
+            src="/Logo.png"
+            height="100"
+            width="100"
             alt="Needles And Cones Logo"
           />
         </Link>
@@ -23,6 +23,10 @@ const Navbar = ({handleClick, isLoggedIn}) => (
         <div>
           {/* The navbar will show these links after you log in */}
           <Link to="/home">Home</Link>
+          <Link to="/find">Find My Pine</Link>
+          <Link to="/journal">My Tree Journal</Link>
+          <Link to="/learn">Learn</Link>
+          <Link to="/about">About</Link>
           <a href="#" onClick={handleClick}>
             Logout
           </a>
@@ -30,6 +34,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
       ) : (
         <div>
           {/* The navbar will show these links before you log in */}
+          <Link to="/find">Find My Pine</Link>
           <Link to="/learn">Learn</Link>
           <Link to="/about">About</Link>
           <Link to="/login">Login</Link>
