@@ -5,6 +5,8 @@ body {
 
 a {
   text-decoration: none;
+  color: rgb(75, 118, 65);
+  font-weight: bold;
 }
 
 label {
@@ -23,10 +25,11 @@ form div {
 
 .navbar {
   display: flex;
-  background-color: white;
+  background-color: rgb(245, 242, 242);
   padding: 1em;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .logo {
