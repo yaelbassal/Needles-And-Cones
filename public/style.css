@@ -30,9 +30,38 @@ form div {
   justify-content: space-between;
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
+  border-radius: 10px;
 }
 
 .logo {
   display: flex;
   align-items: center;
+}
+
+.form {
+  background-color: rgb(75, 118, 65);
+  padding: 4em;
+  color: white;
+  position: absolute;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.googlebutton {
+  color: white;
+  padding: 1em;
+}
+
+.loginAndSignUpImage {
+  max-width: 50%;
+  height: auto;
+  float: right;
+  padding-right: 8em;
+}
+
+.submit {
+  width: 70px;
+  height: 30px;
+  font-weight: bold;
+  color: rgb(75, 118, 65);
 }
