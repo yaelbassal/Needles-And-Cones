@@ -40,7 +40,7 @@ form div {
 
 .form {
   background-color: rgb(75, 118, 65);
-  padding: 4em;
+  padding: 5em;
   color: white;
   position: absolute;
   border-radius: 10px;
@@ -50,6 +50,7 @@ form div {
 .googlebutton {
   color: white;
   padding: 1em;
+  font-size: large;
 }
 
 .loginAndSignUpImage {
