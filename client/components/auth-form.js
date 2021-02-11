@@ -11,6 +11,19 @@ const AuthForm = props => {
 
   return (
     <div>
+      <div>
+        {displayName === 'Login' ? (
+          <div>
+            {/* The user will see Welcome Back! */}
+            <h1>Welcome Back!</h1>
+          </div>
+        ) : (
+          <div>
+            {/* // The user will see Create Your Account! */}
+            <h1>Create Your Account!</h1>
+          </div>
+        )}
+      </div>
       <div className="form">
         <form onSubmit={handleSubmit} name={name}>
           <div>
