@@ -40,7 +40,9 @@ form div {
 
 .form {
   background-color: rgb(75, 118, 65);
-  padding: 5em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 5em;
   color: white;
   position: absolute;
   border-radius: 10px;
@@ -65,4 +67,10 @@ form div {
   height: 30px;
   font-weight: bold;
   color: rgb(75, 118, 65);
+}
+
+#welcome-message {
+  margin-bottom: 3em;
+  border-bottom: double rgb(219, 186, 88);
+  font-weight: normal;
 }
