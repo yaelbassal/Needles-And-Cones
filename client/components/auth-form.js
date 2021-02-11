@@ -12,29 +12,44 @@ const AuthForm = props => {
   return (
     <div>
       <div className="form">
-        <form onSubmit={handleSubmit} name={name}>
-          <div>
-            <label htmlFor="email">
-              <medium>Email</medium>
-            </label>
-            <input name="email" type="text" />
-          </div>
-          <div>
-            <label htmlFor="password">
-              <medium>Password</medium>
-            </label>
-            <input name="password" type="password" />
-          </div>
-          <div>
-            <button className="submit" type="submit">
-              {displayName}
-            </button>
-          </div>
-          {error && error.response && <div> {error.response.data} </div>}
-        </form>
-        <a className="googlebutton" href="/auth/google">
-          {displayName} with Google
-        </a>
+        <div id="welcome-message">
+          {displayName === 'Login' ? (
+            <div>
+              {/* The user will see Welcome Back! */}
+              <h2>Welcome Back!</h2>
+            </div>
+          ) : (
+            <div>
+              {/* // The user will see Create Your Account! */}
+              <h2>Create Your Account!</h2>
+            </div>
+          )}
+        </div>
+        <div>
+          <form onSubmit={handleSubmit} name={name}>
+            <div>
+              <label htmlFor="email">
+                <medium>Email</medium>
+              </label>
+              <input name="email" type="text" />
+            </div>
+            <div>
+              <label htmlFor="password">
+                <medium>Password</medium>
+              </label>
+              <input name="password" type="password" />
+            </div>
+            <div>
+              <button className="submit" type="submit">
+                {displayName}
+              </button>
+            </div>
+            {error && error.response && <div> {error.response.data} </div>}
+          </form>
+          <a className="googlebutton" href="/auth/google">
+            {displayName} with Google
+          </a>
+        </div>
       </div>
       <div>
         <img
