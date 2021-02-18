@@ -1,8 +1,16 @@
 const crypto = require('crypto')
 const Sequelize = require('sequelize')
+//db connects to Postgres
 const db = require('../db')
 
 const User = db.define('user', {
+  name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
   email: {
     type: Sequelize.STRING,
     unique: true,
@@ -26,6 +34,14 @@ const User = db.define('user', {
   },
   googleId: {
     type: Sequelize.STRING
+  },
+  is_logged_in: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false
+  },
+  is_admin: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false
   }
 })
 
