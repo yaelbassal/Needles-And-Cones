@@ -30,10 +30,37 @@ export const me = () => async dispatch => {
   }
 }
 
+/**
+ * THUNK for Login
+ */
 export const auth = (email, password, method) => async dispatch => {
   let res
   try {
     res = await axios.post(`/auth/${method}`, {email, password})
+  } catch (authError) {
+    return dispatch(getUser({error: authError}))
+  }
+
+  try {
+    dispatch(getUser(res.data))
+    history.push('/home')
+  } catch (dispatchOrHistoryErr) {
+    console.error(dispatchOrHistoryErr)
+  }
+}
+
+/**
+ * THUNK for Signup
+ */
+export const authSignup = (
+  email,
+  password,
+  fullName,
+  method
+) => async dispatch => {
+  let res
+  try {
+    res = await axios.post(`/auth/${method}`, {fullName, email, password})
   } catch (authError) {
     return dispatch(getUser({error: authError}))
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
-import {auth} from '../store'
+import {auth, authSignup} from '../store'
 
 /**
  * COMPONENT
@@ -27,6 +27,17 @@ const AuthForm = props => {
         </div>
         <div>
           <form onSubmit={handleSubmit} name={name}>
+            <div>
+              {displayName === 'Sign Up' && (
+                <div id="full-name">
+                  <label htmlFor="fullname">
+                    <medium>Full Name</medium>
+                  </label>
+                  <input name="fullname" type="text" />
+                </div>
+              )}
+            </div>
+            <br />
             <div>
               <label htmlFor="email">
                 <medium>Email</medium>
@@ -64,6 +75,7 @@ const AuthForm = props => {
 
 /**
  * CONTAINER
+ *  (information belowe has changed because form data fields had to be added to signup component)
  *   Note that we have two different sets of 'mapStateToProps' functions -
  *   one for Login, and one for Signup. However, they share the same 'mapDispatchToProps'
  *   function, and share the same Component. This is a good example of how we
@@ -85,6 +97,19 @@ const mapSignup = state => {
   }
 }
 
+const mapDispatchSignup = dispatch => {
+  return {
+    handleSubmit(evt) {
+      evt.preventDefault()
+      const fullName = evt.target.fullname.value
+      const formName = evt.target.name
+      const email = evt.target.email.value
+      const password = evt.target.password.value
+      dispatch(authSignup(email, password, fullName, formName))
+    }
+  }
+}
+
 const mapDispatch = dispatch => {
   return {
     handleSubmit(evt) {
@@ -98,7 +123,7 @@ const mapDispatch = dispatch => {
 }
 
 export const Login = connect(mapLogin, mapDispatch)(AuthForm)
-export const Signup = connect(mapSignup, mapDispatch)(AuthForm)
+export const Signup = connect(mapSignup, mapDispatchSignup)(AuthForm)
 
 /**
  * PROP TYPES
