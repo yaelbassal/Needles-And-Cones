@@ -114,6 +114,10 @@ const Tree_Type = db.define('tree_type', {
     validate: {
       notEmpty: true
     }
+  },
+  sources: {
+    type: Sequelize.ARRAY(Sequelize.TEXT),
+    allowNull: false
   }
 })
 
