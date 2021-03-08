@@ -1,6 +1,6 @@
 const crypto = require('crypto')
 const Sequelize = require('sequelize')
-//db connects to Postgres
+//db connects to PostgreSQL
 const db = require('../db')
 
 const User = db.define('user', {

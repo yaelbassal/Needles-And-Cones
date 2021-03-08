@@ -1,5 +1,6 @@
 const User = require('./user')
 const Journal = require('./journal')
+const Tree_Type = require('./tree-type')
 
 /**
  * If we had any associations to make, this would be a great place to put them!
@@ -20,5 +21,6 @@ Journal.belongsTo(User)
  */
 module.exports = {
   User,
-  Journal
+  Journal,
+  Tree_Type
 }
