@@ -39,7 +39,39 @@ async function seed() {
         'Graceful, long horizontal branches; irregular outline. (Sibley 6)',
       shape_image: '/images/eastern-white-pine/eastern-white-shape.jpg',
       sources: [
-        '“Eastern White Pine Pinus Strobus.” Edible Wild Food, www.ediblewildfood.com/eastern-white-pine.aspx.”,  “Seiler, John, et al. “Virginia Tech Dendrology.” Virginia Tech Dendrology Fact Sheet, Virginia Tech Dept. of Forest Resources and Environmental Conservation, 2021, dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=111.”, “Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
+        '“Eastern White Pine Pinus Strobus.” Edible Wild Food, www.ediblewildfood.com/eastern-white-pine.aspx.”',
+        '“Seiler, John, et al. “Virginia Tech Dendrology.” Virginia Tech Dendrology Fact Sheet, Virginia Tech Dept. of Forest Resources and Environmental Conservation, 2021, dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=111.”',
+        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
+      ]
+    }),
+    Tree_Type.create({
+      common_name: 'Mugo Pine',
+      latin_name: 'Pinus mugo',
+      tree_image: '/images/mugo-pine/mugo.jpg',
+      general_description:
+        "Evergreen. Shrub to medium tree(max. 62'). Most planted cultivars short and bushy to about 20'. Related to Scotch and Japanese Red Pines, but with short, stiff, sharp needles. (Sibley 17)",
+      needles_description:
+        '2 needles, 2", dark green, stiff; persist 5 years or longer (Sibley 17)',
+      needles_image: '/images/mugo-pine/mugo-needles.jpg',
+      cones_description:
+        'cones 1 1/2", gray-brown, lopsided, with thickened scales and small spines; similar to Scotch, but nearly stalkless (Sibley 17)',
+      cones_image: '/images/mugo-pine/mugo-cones.jpg',
+      twigs_description:
+        'Moderate, typically short growth, very dense foliage, gray-brown buds and stem. (Seiler et al. Virginia Tech Dendrology)',
+      twigs_image: '/images/mugo-pine/mugo-twig.jpeg',
+      //up to here.
+      branches_description:
+        'Branches are stout, irregular in shape, and grow horizontal to ascending. (Eastern White Pine Pinus strobus)',
+      branches_image: '/images/eastern-white-pine/eastern-white-branches.jpg',
+      bark_description:
+        'Bark on young trunks pale gray-green and smooth. Bark on mature trunks dark gray, often tinged with purple; slightly to conspicuously furrowed. (Sibley 6)',
+      bark_image: '/images/eastern-white-pine/eastern-white-bark.jpg',
+      shape_description:
+        'Graceful, long horizontal branches; irregular outline. (Sibley 6)',
+      shape_image: '/images/eastern-white-pine/eastern-white-shape.jpg',
+      sources: [
+        '“Seiler, John, et al. “Virginia Tech Dendrology.” Virginia Tech Dendrology Fact Sheet, Virginia Tech Dept. of Forest Resources and Environmental Conservation, 2021, dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=111.”',
+        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
       ]
     })
   ])
