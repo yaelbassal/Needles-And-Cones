@@ -59,17 +59,17 @@ async function seed() {
       twigs_description:
         'Moderate, typically short growth, very dense foliage, gray-brown buds and stem. (Seiler et al. Virginia Tech Dendrology)',
       twigs_image: '/images/mugo-pine/mugo-twig.jpeg',
-      //up to here.
       branches_description:
-        'Branches are stout, irregular in shape, and grow horizontal to ascending. (Eastern White Pine Pinus strobus)',
-      branches_image: '/images/eastern-white-pine/eastern-white-branches.jpg',
+        "branches don't droop (Edward F. Gilman and Dennis G. Watson, 2015)",
+      branches_image: '/images/mugo-pine/mugo-branches.jpeg',
       bark_description:
-        'Bark on young trunks pale gray-green and smooth. Bark on mature trunks dark gray, often tinged with purple; slightly to conspicuously furrowed. (Sibley 6)',
-      bark_image: '/images/eastern-white-pine/eastern-white-bark.jpg',
+        'bark brownish gray, rather smooth but splitting vertically and horizontally. (Sibley 17)',
+      bark_image: '/images/mugo-pine/mugo-bark.jpeg',
       shape_description:
-        'Graceful, long horizontal branches; irregular outline. (Sibley 6)',
-      shape_image: '/images/eastern-white-pine/eastern-white-shape.jpg',
+        'symmetrical canopy with a regular (or smooth) outline, and individuals have more or less identical crown forms; crown shape can be round or pyramidal; crown density is dense (Edward F. Gilman and Dennis G. Watson, 2015)',
+      shape_image: '/images/mugo-pine/mugo-shape.jpeg',
       sources: [
+        'Edward F. Gilman and Dennis G. Watson. (2015, April 01). Pinus Mugo: Mugo pine. Retrieved March 18, 2021, from https://edis.ifas.ufl.edu/st467',
         '“Seiler, John, et al. “Virginia Tech Dendrology.” Virginia Tech Dendrology Fact Sheet, Virginia Tech Dept. of Forest Resources and Environmental Conservation, 2021, dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=111.”',
         'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
       ]
