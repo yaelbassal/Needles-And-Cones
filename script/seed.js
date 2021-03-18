@@ -14,6 +14,7 @@ async function seed() {
   ])
 
   const treeTypes = await Promise.all([
+    //EASTERN WHITE PINE
     Tree_Type.create({
       common_name: 'Eastern White Pine',
       latin_name: 'Pinus strobus',
@@ -44,6 +45,7 @@ async function seed() {
         'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
       ]
     }),
+    //MUGO PINE
     Tree_Type.create({
       common_name: 'Mugo Pine',
       latin_name: 'Pinus mugo',
@@ -72,6 +74,36 @@ async function seed() {
         'Edward F. Gilman and Dennis G. Watson. (2015, April 01). Pinus Mugo: Mugo pine. Retrieved March 18, 2021, from https://edis.ifas.ufl.edu/st467',
         '“Seiler, John, et al. “Virginia Tech Dendrology.” Virginia Tech Dendrology Fact Sheet, Virginia Tech Dept. of Forest Resources and Environmental Conservation, 2021, dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=111.”',
         'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
+      ]
+    }),
+    //PITCH PINE
+    Tree_Type.create({
+      common_name: 'Pitch Pine',
+      latin_name: 'Pinus rigida',
+      tree_image: '/images/pitch-pine/pitch.jpeg',
+      general_description:
+        'Evergreen. Small to medium tree usually 40-60\' tall (max.101\'). Straight or crooked, commonly with tufts of needles along trunk; crown rounded or irregular. Known to hybridize naturally with Shortleaf Pine, and very closely related to and integrading with Pond Pine. Common and widespread, especially in dry sandy "pine barrens" or rocky soil, but also in damp soils in swamp margins. (Sibley 24)',
+      needles_description:
+        '3 (4-5) needles, 3 1/4", yellow-green, stiff, spreading, somewhat curved and twisted; persist 2-3 years (Sibley 24)',
+      needles_image: '/images/pitch-pine/pitch-needles.jpeg',
+      cones_description:
+        'cones 2 1/2", flat at base, very prickly; often persistent; cones often in clusters of 2-3 (Sibley 24)',
+      cones_image: '/images/pitch-pine/pitch-cones.jpeg',
+      twigs_description:
+        'long, stiff needles clumped at twig tip; twigs are fibrous and do not snap cleanly when bent; the only 3-needle pine with fibrous twigs (Sibley 24); twigs are orange-brown and moderately stout; buds narrowly ovoid, light gray-brown (Seiler et al. Virginia Tech Dendrology)',
+      twigs_image: '/images/pitch-pine/pitch-twig.jpeg',
+      branches_description: 'twisting, gnarled, drooping branches (2013)',
+      branches_image: '/images/pitch-pine/pitch-branches.jpeg',
+      bark_description:
+        'tufts of needles often sprout directly from trunk, a habit shared only with Pond Pine; bark red-brown, deeply and irregularly furrowed, with long, rectangular plates (Sibley 24)',
+      bark_image: '/images/pitch-pine/pitch-bark.jpeg',
+      shape_description:
+        'irregular branches and clumps of foliage create relatively smooth rounded crown(Sibley 24)',
+      shape_image: '/images/pitch-pine/pitch-shape.jpeg',
+      sources: [
+        '“Seiler, John, et al. “Virginia Tech Dendrology.” Virginia Tech Dendrology Fact Sheet, Virginia Tech Dept. of Forest Resources and Environmental Conservation, 2021, dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=111.”',
+        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.',
+        'T. (2013, October 11). Lady Bird Johnson Wildflower Center, Plant Database. Retrieved March 18, 2021, from https://www.wildflower.org/plants/result.php?id_plant=PIRI#:~:text=Pitch%20pine%20is%20a%2040,bark%20which%20eventually%20becomes%20black.&amp;text=Medium%2Dsized%20tree%20often%20bearing,irregular%20crown%20of%20horizontal%20branches.'
       ]
     })
   ])
