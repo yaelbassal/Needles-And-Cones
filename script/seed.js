@@ -105,6 +105,33 @@ async function seed() {
         'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.',
         'T. (2013, October 11). Lady Bird Johnson Wildflower Center, Plant Database. Retrieved March 18, 2021, from https://www.wildflower.org/plants/result.php?id_plant=PIRI#:~:text=Pitch%20pine%20is%20a%2040,bark%20which%20eventually%20becomes%20black.&amp;text=Medium%2Dsized%20tree%20often%20bearing,irregular%20crown%20of%20horizontal%20branches.'
       ]
+    }),
+    //RED PINE
+    Tree_Type.create({
+      common_name: 'Red Pine',
+      latin_name: 'Pinus resinosa',
+      tree_image: '/images/red-pine/red.jpeg',
+      general_description:
+        "Evergreen. Medium to large tree usually 50-80' tall (max. 154'); crown narrowly rounded. Red Pine was once the most important timber pine in the Great Lakes region. Common in dry woodlands, sandy soils, eastern boreal forests. Very commonly cultivated and naturalized, most trees seen are planted. (Sibley 28)",
+      needles_description:
+        '2(3) needles; 5", rigid and straight, often yellow-green; persist 2 - 4 years; needles snap cleanly when bent unlike other pines (Sibley 28)',
+      needles_image: '/images/red-pine/red-needles.jpeg',
+      cones_description: 'cones small, 2", not prickly (Sibley 28)',
+      cones_image: '/images/red-pine/red-cones.jpeg',
+      twigs_description: 'twigs fairly stout, rough (Sibley 28)',
+      twigs_image: '/images/red-pine/red-twig.jpeg',
+      branches_description:
+        'needles densely tufted at branch tips; cones very small among long needles (Sibley 28)',
+      branches_image: '/images/red-pine/pine-branches.jpeg',
+      bark_description:
+        'bark pale silvery red-brown, furrowed into irregular scaly ridges (Sibley 28)',
+      bark_image: '/images/red-pine/red-bark.jpeg',
+      shape_description:
+        'trunk straight, pale silvery and reddish; oval crown with tufts of dark needles, stout twigs (Sibley 28)',
+      shape_image: '/images/red-pine/pine-shape.jpeg',
+      sources: [
+        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
+      ]
     })
   ])
 
