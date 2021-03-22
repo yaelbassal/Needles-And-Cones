@@ -122,15 +122,45 @@ async function seed() {
       twigs_image: '/images/red-pine/red-twig.jpeg',
       branches_description:
         'needles densely tufted at branch tips; cones very small among long needles (Sibley 28)',
-      branches_image: '/images/red-pine/pine-branches.jpeg',
+      branches_image: '/images/red-pine/red-branches.jpeg',
       bark_description:
         'bark pale silvery red-brown, furrowed into irregular scaly ridges (Sibley 28)',
       bark_image: '/images/red-pine/red-bark.jpeg',
       shape_description:
         'trunk straight, pale silvery and reddish; oval crown with tufts of dark needles, stout twigs (Sibley 28)',
-      shape_image: '/images/red-pine/pine-shape.jpeg',
+      shape_image: '/images/red-pine/red-shape.jpeg',
       sources: [
         'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
+      ]
+    }),
+    //SCOTCH PINE
+    Tree_Type.create({
+      common_name: 'Scotch Pine',
+      latin_name: 'Pinus sylvestris',
+      tree_image: '/images/scotch-pine/scotch.jpeg',
+      general_description:
+        "Evergreen. Small to medium tree usually 25-50' tall(max.106'). Trunk usually curved, with few long branches. Distinctive orange bark of upper trunk and branches, short blue-green needles, and small cones without prickles (Sibley 22)",
+      needles_description:
+        '2 needles, 2", twisted, stiff, blunt-tipped, gray to blue-green, persist 2-4 years (Sibley 22)',
+      needles_image: '/images/scotch-pine/scotch-needles.jpeg',
+      cones_description:
+        'cones 2", not prickly, open when ripe and sometimes persistent (Sibley 22)',
+      cones_image: '/images/scotch-pine/scotch-cones.jpeg',
+      twigs_description:
+        'twigs slender; needles twisted; cones point back towards twig (Sibley 22)',
+      twigs_image: '/images/scotch-pine/scotch-twig.jpeg',
+      branches_description:
+        'Branches are thin, gnarled, often crooked, and have needles at their ends. Overall, the branching of the tree is not very dense and showcases a lot of open space between branches. (19, Yale University 2016)',
+      branches_image: '/images/scotch-pine/scotch-branches.jpeg',
+      bark_description:
+        'bark on upper trunk and branches of mature tree smooth, bright rusty-orange; bark of main trunk gray with thin scaly ridges (Sibley 22)',
+      bark_image: '/images/scotch-pine/scotch-bark.jpeg',
+      shape_description:
+        'curved orange trunk and irregular crown; most cultivated and escaped trees, shorter, curved; some varieties tall and straight; valuable lumber trees(Sibley 22)',
+      shape_image: '/images/scotch-pine/scotch-shape.jpeg',
+      sources: [
+        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.',
+        '19, J. (2016, April 19). Yale University. Retrieved March 22, 2021, from https://naturewalk.yale.edu/trees/pinaceae/pinus-sylvestris/scotch-pine-21'
       ]
     })
   ])
