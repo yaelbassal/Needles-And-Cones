@@ -162,6 +162,37 @@ async function seed() {
         'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.',
         '19, J. (2016, April 19). Yale University. Retrieved March 22, 2021, from https://naturewalk.yale.edu/trees/pinaceae/pinus-sylvestris/scotch-pine-21'
       ]
+    }),
+    //Jack Pine
+    Tree_Type.create({
+      common_name: 'Jack Pine',
+      latin_name: 'Pinus banksiana',
+      tree_image: '/images/jack-pine/jack.png',
+      general_description:
+        "Evergreen. Small to medium tree usually 20-40' tall(max.97', smaller to East); usually crooked, leaning, guant and yellow-green with abundant retained cones, crown irregular, often flat-topped. No other eastern pine has such short needles or curved cones. (Sibley 20)",
+      needles_description:
+        '2 needles, very short, 1 1/4", yellow-green, stiff, divergent and twisted; persist 2 - 4 years (Sibley 20)',
+      //up to here
+      needles_image: '/images/scotch-pine/scotch-needles.jpeg',
+      cones_description:
+        'cones 2", not prickly, open when ripe and sometimes persistent (Sibley 22)',
+      cones_image: '/images/scotch-pine/scotch-cones.jpeg',
+      twigs_description:
+        'twigs slender; needles twisted; cones point back towards twig (Sibley 22)',
+      twigs_image: '/images/scotch-pine/scotch-twig.jpeg',
+      branches_description:
+        'Branches are thin, gnarled, often crooked, and have needles at their ends. Overall, the branching of the tree is not very dense and showcases a lot of open space between branches. (19, Yale University 2016)',
+      branches_image: '/images/scotch-pine/scotch-branches.jpeg',
+      bark_description:
+        'bark on upper trunk and branches of mature tree smooth, bright rusty-orange; bark of main trunk gray with thin scaly ridges (Sibley 22)',
+      bark_image: '/images/scotch-pine/scotch-bark.jpeg',
+      shape_description:
+        'curved orange trunk and irregular crown; most cultivated and escaped trees, shorter, curved; some varieties tall and straight; valuable lumber trees(Sibley 22)',
+      shape_image: '/images/scotch-pine/scotch-shape.jpeg',
+      sources: [
+        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.',
+        '19, J. (2016, April 19). Yale University. Retrieved March 22, 2021, from https://naturewalk.yale.edu/trees/pinaceae/pinus-sylvestris/scotch-pine-21'
+      ]
     })
   ])
 
