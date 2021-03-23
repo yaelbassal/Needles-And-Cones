@@ -172,26 +172,24 @@ async function seed() {
         "Evergreen. Small to medium tree usually 20-40' tall(max.97', smaller to East); usually crooked, leaning, guant and yellow-green with abundant retained cones, crown irregular, often flat-topped. No other eastern pine has such short needles or curved cones. (Sibley 20)",
       needles_description:
         '2 needles, very short, 1 1/4", yellow-green, stiff, divergent and twisted; persist 2 - 4 years (Sibley 20)',
-      //up to here
-      needles_image: '/images/scotch-pine/scotch-needles.jpeg',
+      needles_image: '/images/jack-pine/jack-needles.jpeg',
       cones_description:
-        'cones 2", not prickly, open when ripe and sometimes persistent (Sibley 22)',
-      cones_image: '/images/scotch-pine/scotch-cones.jpeg',
+        'cones 2", curved and pointing towards tip of twig; closed cones sickly gray-white, persistant; on some trees most cones open, on others, cones remain closed until fire event (Sibley 20)',
+      cones_image: '/images/jack-pine/jack-cones.jpeg',
       twigs_description:
-        'twigs slender; needles twisted; cones point back towards twig (Sibley 22)',
-      twigs_image: '/images/scotch-pine/scotch-twig.jpeg',
+        'short yellow-green needles relatively sparse on twig (Sibley 20)',
+      twigs_image: '/images/jack-pine/jack-twig.jpeg',
       branches_description:
-        'Branches are thin, gnarled, often crooked, and have needles at their ends. Overall, the branching of the tree is not very dense and showcases a lot of open space between branches. (19, Yale University 2016)',
-      branches_image: '/images/scotch-pine/scotch-branches.jpeg',
-      bark_description:
-        'bark on upper trunk and branches of mature tree smooth, bright rusty-orange; bark of main trunk gray with thin scaly ridges (Sibley 22)',
-      bark_image: '/images/scotch-pine/scotch-bark.jpeg',
+        'Jack Pine branches are long and spreading, forming an open ragged crown. (Iowa State University, 2021)',
+      branches_image: '/images/jack-pine/jack-branches.jpeg',
+      bark_description: 'bark orange- to red-brown, scaly (Sibley 20)',
+      bark_image: '/images/jack-pine/jack-bark.jpeg',
       shape_description:
-        'curved orange trunk and irregular crown; most cultivated and escaped trees, shorter, curved; some varieties tall and straight; valuable lumber trees(Sibley 22)',
-      shape_image: '/images/scotch-pine/scotch-shape.jpeg',
+        'usually a crooked, irregular tree with short needles, jutting branches, and many pesistent small cones (Sibley 20)',
+      shape_image: '/images/jack-pine/jack-shape.jpeg',
       sources: [
-        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.',
-        '19, J. (2016, April 19). Yale University. Retrieved March 22, 2021, from https://naturewalk.yale.edu/trees/pinaceae/pinus-sylvestris/scotch-pine-21'
+        'Iowa State University. (2021). Jack pine. Retrieved March 23, 2021, from https://naturalresources.extension.iastate.edu/forestry/iowa_trees/trees/jack_pine.html',
+        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
       ]
     })
   ])
