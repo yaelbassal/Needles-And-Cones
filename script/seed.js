@@ -162,6 +162,35 @@ async function seed() {
         'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.',
         '19, J. (2016, April 19). Yale University. Retrieved March 22, 2021, from https://naturewalk.yale.edu/trees/pinaceae/pinus-sylvestris/scotch-pine-21'
       ]
+    }),
+    //Jack Pine
+    Tree_Type.create({
+      common_name: 'Jack Pine',
+      latin_name: 'Pinus banksiana',
+      tree_image: '/images/jack-pine/jack.png',
+      general_description:
+        "Evergreen. Small to medium tree usually 20-40' tall(max.97', smaller to East); usually crooked, leaning, guant and yellow-green with abundant retained cones, crown irregular, often flat-topped. No other eastern pine has such short needles or curved cones. (Sibley 20)",
+      needles_description:
+        '2 needles, very short, 1 1/4", yellow-green, stiff, divergent and twisted; persist 2 - 4 years (Sibley 20)',
+      needles_image: '/images/jack-pine/jack-needles.jpeg',
+      cones_description:
+        'cones 2", curved and pointing towards tip of twig; closed cones sickly gray-white, persistant; on some trees most cones open, on others, cones remain closed until fire event (Sibley 20)',
+      cones_image: '/images/jack-pine/jack-cones.jpeg',
+      twigs_description:
+        'short yellow-green needles relatively sparse on twig (Sibley 20)',
+      twigs_image: '/images/jack-pine/jack-twig.jpeg',
+      branches_description:
+        'Jack Pine branches are long and spreading, forming an open ragged crown. (Iowa State University, 2021)',
+      branches_image: '/images/jack-pine/jack-branches.jpeg',
+      bark_description: 'bark orange- to red-brown, scaly (Sibley 20)',
+      bark_image: '/images/jack-pine/jack-bark.jpeg',
+      shape_description:
+        'usually a crooked, irregular tree with short needles, jutting branches, and many pesistent small cones (Sibley 20)',
+      shape_image: '/images/jack-pine/jack-shape.jpeg',
+      sources: [
+        'Iowa State University. (2021). Jack pine. Retrieved March 23, 2021, from https://naturalresources.extension.iastate.edu/forestry/iowa_trees/trees/jack_pine.html',
+        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
+      ]
     })
   ])
 
