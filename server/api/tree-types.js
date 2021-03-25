@@ -4,7 +4,7 @@ const router = require('express').Router()
 const {Tree_Type} = require('../db/models')
 module.exports = router
 
-//mounted on /api/learn b/c of router.use in '/api/index.js' in server.
+//mounted on /api/trees b/c of router.use in '/api/index.js' in server.
 router.get('/', async (req, res, next) => {
   try {
     const treeTypes = await Tree_Type.findAll()

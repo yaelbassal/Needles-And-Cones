@@ -1,0 +1,22 @@
+import axios from 'axios'
+
+//ACTION TYPES
+const GET_TREES = 'GET_TREES'
+
+//ACTION CREATORS
+const setTrees = trees => ({
+  type: GET_TREES,
+  trees
+})
+
+//THUNK CREATOR
+export const fetchAllTrees = () => {
+  return async dispatch => {
+    try {
+      const {data} = await axios.get('/api/trees')
+      dispatch(setTrees(data))
+    } catch (err) {
+      console.log(err)
+    }
+  }
+}
