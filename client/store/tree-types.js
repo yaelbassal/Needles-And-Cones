@@ -20,3 +20,16 @@ export const fetchAllTrees = () => {
     }
   }
 }
+
+//INITIAL STATE
+const initialState = []
+
+//REDUCER
+export default function treesReducer(state = initialState, action) {
+  switch (action.type) {
+    case GET_TREES:
+      return action.trees
+    default:
+      return state
+  }
+}
