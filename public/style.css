@@ -78,3 +78,25 @@ form div {
 #full-name {
   margin: 0em;
 }
+
+/* LEARN COMPONENT */
+.learn-container {
+  color: rgb(75, 118, 65);
+  font-weight: bold;
+  text-align: center;
+}
+
+.trees-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 1em;
+  text-align: left;
+}
+
+.tree-image {
+  width: 350px;
+  height: 350px;
+  border: 2px solid rgb(245, 242, 242);
+  border-radius: 4px;
+}

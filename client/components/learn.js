@@ -15,15 +15,22 @@ class Learn extends Component {
   render() {
     const trees = this.props.trees
     return (
-      <div>
+      <div className="learn-container">
+        <br />
         <h1>Pine Trees of Massachusetts</h1>
+        <br />
         <div className="trees-list">
           {trees.map(tree => {
             return (
               <div className="tree" key={tree.id}>
-                <img src={window.location.origin + tree.tree_image} />
-                <h5>{tree.common_name}</h5>
-                <h5>{tree.latin_name}</h5>
+                <img
+                  className="tree-image"
+                  src={window.location.origin + tree.tree_image}
+                />
+                <h4>
+                  {tree.common_name} | {tree.latin_name}
+                </h4>
+                <br />
               </div>
             )
           })}
