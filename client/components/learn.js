@@ -1,18 +1,36 @@
-import React from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {fetchAllTrees} from '../store/tree-types'
 
-/**
- * COMPONENT
- */
-export const Learn = props => {
-  const {email} = props
+class Learn extends Component {
+  constructor() {
+    super()
+  }
 
-  return (
-    <div>
-      <h3>Welcome, {email}</h3>
-    </div>
-  )
+  componentDidMount() {
+    this.props.getTrees()
+  }
+
+  render() {
+    const trees = this.props.trees
+    return (
+      <div>
+        <h1>Pine Trees of Massachusetts</h1>
+        <div className="trees-list">
+          {trees.map(tree => {
+            return (
+              <div className="tree" key={tree.id}>
+                <img src={window.location.origin + tree.tree_image} />
+                <h5>{tree.common_name}</h5>
+                <h5>{tree.latin_name}</h5>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
 }
 
 /**
@@ -20,15 +38,21 @@ export const Learn = props => {
  */
 const mapState = state => {
   return {
-    email: state.user.email
+    trees: state.trees
   }
 }
 
-export default connect(mapState)(Learn)
+const mapDispatch = dispatch => {
+  return {
+    getTrees: () => dispatch(fetchAllTrees())
+  }
+}
+
+export default connect(mapState, mapDispatch)(Learn)
 
 /**
  * PROP TYPES
  */
 Learn.propTypes = {
-  email: PropTypes.string
+  trees: PropTypes.array
 }
