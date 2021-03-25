@@ -23,6 +23,7 @@ class Learn extends Component {
           {trees.map(tree => {
             return (
               <div className="tree" key={tree.id}>
+                {/* Next Step: Add Link Tag to make image clickable.  */}
                 <img
                   className="tree-image"
                   src={window.location.origin + tree.tree_image}
