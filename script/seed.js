@@ -163,7 +163,7 @@ async function seed() {
         '19, J. (2016, April 19). Yale University. Retrieved March 22, 2021, from https://naturewalk.yale.edu/trees/pinaceae/pinus-sylvestris/scotch-pine-21'
       ]
     }),
-    //Jack Pine
+    //JACK PINE
     Tree_Type.create({
       common_name: 'Jack Pine',
       latin_name: 'Pinus banksiana',
@@ -190,6 +190,35 @@ async function seed() {
       sources: [
         'Iowa State University. (2021). Jack pine. Retrieved March 23, 2021, from https://naturalresources.extension.iastate.edu/forestry/iowa_trees/trees/jack_pine.html',
         'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
+      ]
+    }),
+    //AUSTRIAN PINE
+    Tree_Type.create({
+      common_name: 'Austrian Pine',
+      latin_name: 'Pinus nigra',
+      tree_image: '/images/austrian-pine/austrian.jpeg',
+      general_description:
+        "Evergreen. Medium to large tree usually 50-60' tall (max. 93'). Dark, dense, studylooking tree, broad and conical with short trunk and strong branches (Sibley 29)",
+      needles_description:
+        '2 needles, 4", very dense; persist 2 - 8 years (Sibley 29)',
+      needles_image: '/images/austrian-pine/austrian-needles.jpeg',
+      cones_description:
+        'cones 3", pale yellow-brown becoming dark brown; often prickly (Sibley 29)',
+      cones_image: '/images/austrian-pine/austian-cone.jpeg',
+      twigs_description:
+        'needles stouter than Red Pine, retained on twigs 3+ years (vs. 2) resulting in bushier crown; leaves stiff; buds large 1/2 - 1", silky whitish (Sibley 29)',
+      twigs_image: '/images/austrian-pine/austrian-twig.jpeg',
+      branches_description:
+        'Most Austrian pines have a flat-topped crown with spreading branches that reach out, or they have a pyramidal shape, which branches drooping down. (19, Yale University 2016)',
+      branches_image: '/images/austrian-pine/austrian-branches.jpeg',
+      bark_description:
+        'mature trunks with distinctive pale ridges of grayish-yellow plates (Sibley 29)',
+      bark_image: '/images/austrian-pine/austrian-bark.jpeg',
+      shape_description: 'Oval or Pyramidal (19, Yale University 2016)',
+      shape_image: '/images/austrian-pine/austrian-shape.jpeg',
+      sources: [
+        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.',
+        '19, J. (2016, April 19). Yale University. Retrieved March 22, 2021, from https://naturewalk.yale.edu/trees/pinaceae/pinus-nigra/austrian-pine-65'
       ]
     })
   ])
