@@ -220,6 +220,38 @@ async function seed() {
         'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.',
         '19, J. (2016, April 19). Yale University. Retrieved March 22, 2021, from https://naturewalk.yale.edu/trees/pinaceae/pinus-nigra/austrian-pine-65'
       ]
+    }),
+    //JAPANESE BLACK PINE
+    Tree_Type.create({
+      common_name: 'Japanese Black Pine',
+      latin_name: 'Pinus thunbergii',
+      tree_image: '/images/japanese-black-pine/japanese-black.jpeg',
+      general_description:
+        "Evergreen. Typically a small to medium tree 20-40' tall, with multiple leaning and curving trunks, but can be taller (max. 90'). Similar to Austrian Pine, but usually a smaller tree, cones stalked with base less rounded (Sibley 29)",
+      needles_description:
+        '2 needles, 3 1/4" long; dark green, rigid, thick, sharply pointed, twisted and  spreading; persist 3-5 years (Sibley 29)',
+      needles_image: '/images/japanese-black-pine/japanese-black-needles.jpeg',
+      cones_description:
+        'cones 2 1/4" long, stalked, the scales with tiny prickles; clustered (Sibley 29)',
+      cones_image: '/images/japanese-black-pine/japanese-black-cones.jpeg',
+      twigs_description:
+        'Twigs are light brown, glabrous, in later years turning grayish; buds are large, quite prominent and light reddish brown. (Seiler et al. Virginia Tech Dendrology)',
+      twigs_image: '/images/japanese-black-pine/japanese-black-twig.jpeg',
+      branches_description:
+        'branches droop and hang down loosely (NC State Extension, Pinus thunbergii)',
+      branches_image:
+        '/images/japanese-black-pine/japanese-black-branches.jpeg',
+      bark_description:
+        'mature trunks with broad grayish yellow plates, similar to Austrian Pine (Sibley 29)',
+      bark_image: '/images/japanese-black-pine/japanese-black-bark.jpeg',
+      shape_description:
+        'small, leaning tree, with dense dark needles (Sibley 29)',
+      shape_image: '/images/japanese-black-pine/japanese-black-shape.jpeg',
+      sources: [
+        'NC State Extension. (n.d.). Pinus thunbergii. Retrieved March 25, 2021, from https://plants.ces.ncsu.edu/plants/pinus-thunbergii/',
+        '“Seiler, John, et al. “Virginia Tech Dendrology.” Virginia Tech Dendrology Fact Sheet, Virginia Tech Dept. of Forest Resources and Environmental Conservation, 2021, dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=111.”',
+        'Sibley, David Allen. The Sibley Guide to Trees. Alfred A. Knopf, 2009.'
+      ]
     })
   ])
 
