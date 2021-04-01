@@ -9,7 +9,8 @@ import {
   About,
   Learn,
   Find,
-  Journal
+  Journal,
+  LearnSingleTree
 } from './components'
 import {me} from './store'
 
@@ -30,7 +31,8 @@ class Routes extends Component {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/about" component={About} />
-        <Route path="/learn" component={Learn} />
+        <Route exact path="/learn" component={Learn} />
+        <Route exact path="/learn/:treeId" component={LearnSingleTree} />
         <Route path="/find" component={Find} />
         <Route path="/journal" component={Journal} />
         {isLoggedIn && (

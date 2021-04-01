@@ -4,8 +4,13 @@ import thunkMiddleware from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import user from './user'
 import treesReducer from './tree-types'
+import singleTreeReducer from './single-tree'
 
-const reducer = combineReducers({user, trees: treesReducer})
+const reducer = combineReducers({
+  user,
+  trees: treesReducer,
+  tree: singleTreeReducer
+})
 console.log('This is reducer', reducer)
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))

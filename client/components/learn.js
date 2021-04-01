@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import {fetchAllTrees} from '../store/tree-types'
 
 class Learn extends Component {
@@ -23,11 +24,12 @@ class Learn extends Component {
           {trees.map(tree => {
             return (
               <div className="tree" key={tree.id}>
-                {/* Next Step: Add Link Tag to make image clickable.  */}
-                <img
-                  className="tree-image"
-                  src={window.location.origin + tree.tree_image}
-                />
+                <Link to={`/learn/${tree.id}`}>
+                  <img
+                    className="tree-image"
+                    src={window.location.origin + tree.tree_image}
+                  />
+                </Link>
                 <h4>
                   {tree.common_name} | {tree.latin_name}
                 </h4>
