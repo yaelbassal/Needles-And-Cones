@@ -75,7 +75,7 @@ const AuthForm = props => {
 
 /**
  * CONTAINER
- *  (information belowe has changed because form data fields had to be added to signup component)
+ *  (information below has changed because form data fields had to be added to signup component)
  *   Note that we have two different sets of 'mapStateToProps' functions -
  *   one for Login, and one for Signup. However, they share the same 'mapDispatchToProps'
  *   function, and share the same Component. This is a good example of how we
