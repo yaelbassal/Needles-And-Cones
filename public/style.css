@@ -112,7 +112,12 @@ form div {
   font-family: sans-serif;
 }
 
+.learn-single-tree-container li {
+  margin: 15px;
+}
+
 .single-tree-image {
+  position: relative;
   width: 658px;
   height: 550px;
   border: 2px solid rgb(245, 242, 242);
@@ -120,6 +125,7 @@ form div {
 }
 
 .single-tree-description {
+  position: relative;
   color: rgb(75, 118, 65);
   background-color: rgb(219, 186, 88);
   border: 2px solid rgb(245, 242, 242);
@@ -129,10 +135,20 @@ form div {
 }
 
 .sources-list {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly; */
   text-align: left;
-  margin: 10px;
-  padding: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  word-wrap: break-word;
+}
+
+/* BUTTONS COMPONENT */
+
+.learn-buttons button {
+  border-radius: 4px;
+  width: 100px;
+  font-size: 16px;
+  background-color: rgb(219, 186, 88);
+  padding: 5px;
 }

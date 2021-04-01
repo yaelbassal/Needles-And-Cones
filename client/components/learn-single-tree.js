@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {fetchTree} from '../store/single-tree'
+import Buttons from './buttons'
 
 class LearnSingleTree extends Component {
   constructor() {
@@ -27,6 +28,7 @@ class LearnSingleTree extends Component {
           className="single-tree-image"
           src={window.location.origin + tree.tree_image}
         />
+        <Buttons />
         <div className="sources-list">
           {sources ? (
             sources.map(source => {
