@@ -24,7 +24,6 @@ class Learn extends Component {
           {trees.map(tree => {
             return (
               <div className="tree" key={tree.id}>
-                {/* <Link to={`/learn/${tree.id}`}> */}
                 <Link to={`/learn/${tree.id}`}>
                   <img
                     className="tree-image"

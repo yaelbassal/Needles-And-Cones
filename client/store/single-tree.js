@@ -13,6 +13,7 @@ const setTree = tree => ({
 export const fetchTree = treeId => {
   return async dispatch => {
     try {
+      //axios is communicating w/ API, which is fetching data from db, and returning it as the variable data. In this scenario, data is an obj w/ individual tree data based on the treeId. See API route.
       const {data} = await axios.get(`/api/trees/${treeId}`)
       dispatch(setTree(data))
     } catch (err) {

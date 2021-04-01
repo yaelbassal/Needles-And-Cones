@@ -14,7 +14,30 @@ class LearnSingleTree extends Component {
   }
 
   render() {
-    return <div>hi</div>
+    const tree = this.props.tree
+    const sources = tree.sources
+
+    return (
+      <div className="learn-single-tree-container">
+        <br />
+        <h1>{tree.common_name}</h1>
+        <h2>{tree.latin_name}</h2>
+        <h4 className="single-tree-description">{tree.general_description}</h4>
+        <img
+          className="single-tree-image"
+          src={window.location.origin + tree.tree_image}
+        />
+        <div className="sources-list">
+          {sources ? (
+            sources.map(source => {
+              return <li key={source}>{source}</li>
+            })
+          ) : (
+            <p>Sources Are Not Currently Available</p>
+          )}
+        </div>
+      </div>
+    )
   }
 }
 

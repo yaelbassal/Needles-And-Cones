@@ -101,3 +101,38 @@ form div {
   border: 2px solid rgb(245, 242, 242);
   border-radius: 4px;
 }
+
+/* LEARN SINGLE TREE COMPONENT */
+
+.learn-single-tree-container {
+  color: rgb(219, 186, 88);
+  background-color: rgb(75, 118, 65);
+  font-weight: bold;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.single-tree-image {
+  width: 658px;
+  height: 550px;
+  border: 2px solid rgb(245, 242, 242);
+  border-radius: 10px;
+}
+
+.single-tree-description {
+  color: rgb(75, 118, 65);
+  background-color: rgb(219, 186, 88);
+  border: 2px solid rgb(245, 242, 242);
+  border-radius: 10px;
+  margin: 50px 500px 20px 500px;
+  padding: 50px;
+}
+
+.sources-list {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; */
+  text-align: left;
+  margin: 10px;
+  padding: 50px;
+}
