@@ -105,8 +105,14 @@ form div {
 /* LEARN SINGLE TREE COMPONENT */
 
 .learn-single-tree-container {
-  color: rgb(219, 186, 88);
-  background-color: rgb(75, 118, 65);
+  color: black;
+  background-size: auto, auto;
+  /* source - opacity alternative: https://stackoverflow.com/questions/4997493/set-opacity-of-background-image-without-affecting-child-elements */
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/background-image.jpeg);
   font-weight: bold;
   text-align: center;
   font-family: sans-serif;
@@ -126,7 +132,7 @@ form div {
 
 .single-tree-description {
   position: relative;
-  color: rgb(75, 118, 65);
+  color: black;
   background-color: rgb(219, 186, 88);
   border: 2px solid rgb(245, 242, 242);
   border-radius: 10px;
