@@ -21,8 +21,7 @@ set -e
 # Whether the deploy succeeds or fails, we'll clean up the deploy branch.
 
 function cleanup_at_exit {
-  # return to your master branch
-  # git checkout master - editted to line below (YB)
+  # return to your master branch (switched master to main - YB)
   git checkout main
 
   # remove the deploy branch
@@ -43,6 +42,5 @@ git add -f public/bundle.js public/bundle.js.map
 # create a commit, even if nothing changed
 git commit --allow-empty -m 'Deploying'
 
-# push your local "deploy" branch to the "master" branch on heroku
-# git push --force heroku deploy:master - editted to line below (YB)
+# push your local "deploy" branch to the "master" branch on heroku (switched master to main - YB)
 git push --force heroku deploy:main
