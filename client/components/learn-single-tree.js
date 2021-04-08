@@ -23,7 +23,9 @@ class LearnSingleTree extends Component {
         <br />
         <h1>{tree.common_name}</h1>
         <h2>{tree.latin_name}</h2>
-        <h4 className="single-tree-description">{tree.general_description}</h4>
+        <div className="single-tree-description">
+          <h4>{tree.general_description}</h4>
+        </div>
         <img
           className="single-tree-image"
           src={window.location.origin + tree.tree_image}
