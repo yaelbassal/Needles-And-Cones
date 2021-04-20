@@ -5,8 +5,8 @@ import {fetchTree} from '../store/single-tree'
 import Buttons from './buttons'
 
 class LearnSingleTree extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
   }
 
   componentDidMount() {
@@ -31,7 +31,7 @@ class LearnSingleTree extends Component {
           className="single-tree-image"
           src={window.location.origin + tree.tree_image}
         />
-        <Buttons />
+        <Buttons props={this.props.tree} />
         <div className="sources-list">
           {sources ? (
             sources.map(source => {
