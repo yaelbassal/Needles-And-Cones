@@ -137,7 +137,6 @@ form div {
   background-color: rgb(219, 186, 88);
   border: 2px solid rgb(245, 242, 242);
   border-radius: 10px;
-  /* margin: 50px 500px 20px 500px; */
   margin: auto;
   padding: 50px;
 }
@@ -159,4 +158,42 @@ form div {
   font-size: 16px;
   background-color: rgb(219, 186, 88);
   padding: 5px;
+}
+
+/* MODAL COMPONENT */
+
+.modal {
+  position: fixed;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(219, 186, 88);
+  border: 2px solid rgb(245, 242, 242);
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  color: rgb(75, 118, 65);
+}
+
+.modal img {
+  position: relative;
+  object-fit: scale-down;
+  width: 458px;
+  height: 350px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.modal div {
+  background: rgb(245, 242, 242);
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  min-width: 200px;
+}
+
+#close-button {
+  display: block;
+  margin: auto;
 }

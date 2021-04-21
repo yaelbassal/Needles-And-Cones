@@ -13,6 +13,7 @@ class Buttons extends Component {
 
   showModal(event) {
     this.setState({
+      //toggles show value in state
       show: !this.state.show,
       modalType: event.target.value
     })

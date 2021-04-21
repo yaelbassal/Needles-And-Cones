@@ -6,9 +6,8 @@ class Modal extends Component {
     super(props)
     this.onClose = this.onClose.bind(this)
   }
-  //pass value back back to Buttons component. onClose becomes a value that we can use.
-  //then pass the whole event object back to Buttons component by adding onClose to Modal tag. This makes it so this.props.show becomes false.
-  //Need a little more clarification.
+  //1. pass value back back to Buttons component by adding it to props. onClose becomes a value that we can use.
+  //2. then pass the whole event object back to Buttons component by adding onClose to Modal tag. This makes it so this.props.show becomes false.
   onClose(event) {
     this.props.onClose && this.props.onClose(event)
   }
@@ -22,10 +21,13 @@ class Modal extends Component {
       const needles = this.props.props.props.needles_description
       const needlesImage = this.props.props.props.needles_image
       return (
-        <div>
-          <div>{needles}</div>
+        <div className="modal">
+          <h3>NEEDLES</h3>
           <img src={window.location.origin + needlesImage} />
-          <button onClick={this.onClose}>Close</button>
+          <div>{needles}</div>
+          <button id="close-button" onClick={this.onClose}>
+            Close
+          </button>
         </div>
       )
     }
@@ -33,10 +35,13 @@ class Modal extends Component {
       const cones = this.props.props.props.cones_description
       const conesImage = this.props.props.props.cones_image
       return (
-        <div>
-          <div>{cones}</div>
+        <div className="modal">
+          <h3>CONES</h3>
           <img src={window.location.origin + conesImage} />
-          <button onClick={this.onClose}>Close</button>
+          <div>{cones}</div>
+          <button id="close-button" onClick={this.onClose}>
+            Close
+          </button>
         </div>
       )
     }
@@ -44,10 +49,13 @@ class Modal extends Component {
       const twigs = this.props.props.props.twigs_description
       const twigsImage = this.props.props.props.twigs_image
       return (
-        <div>
-          <div>{twigs}</div>
+        <div className="modal">
+          <h3>TWIGS</h3>
           <img src={window.location.origin + twigsImage} />
-          <button onClick={this.onClose}>Close</button>
+          <div>{twigs}</div>
+          <button id="close-button" onClick={this.onClose}>
+            Close
+          </button>
         </div>
       )
     }
@@ -55,10 +63,13 @@ class Modal extends Component {
       const branches = this.props.props.props.branches_description
       const branchesImage = this.props.props.props.branches_image
       return (
-        <div>
-          <div>{branches}</div>
+        <div className="modal">
+          <h3>BRANCHES</h3>
           <img src={window.location.origin + branchesImage} />
-          <button onClick={this.onClose}>Close</button>
+          <div>{branches}</div>
+          <button id="close-button" onClick={this.onClose}>
+            Close
+          </button>
         </div>
       )
     }
@@ -66,10 +77,13 @@ class Modal extends Component {
       const bark = this.props.props.props.bark_description
       const barkImage = this.props.props.props.bark_image
       return (
-        <div>
-          <div>{bark}</div>
+        <div className="modal">
+          <h3>BARK</h3>
           <img src={window.location.origin + barkImage} />
-          <button onClick={this.onClose}>Close</button>
+          <div>{bark}</div>
+          <button id="close-button" onClick={this.onClose}>
+            Close
+          </button>
         </div>
       )
     }
@@ -77,10 +91,13 @@ class Modal extends Component {
       const shape = this.props.props.props.shape_description
       const shapeImage = this.props.props.props.shape_image
       return (
-        <div>
-          <div>{shape}</div>
+        <div className="modal">
+          <h3>SHAPE</h3>
           <img src={window.location.origin + shapeImage} />
-          <button onClick={this.onClose}>Close</button>
+          <div>{shape}</div>
+          <button id="close-button" onClick={this.onClose}>
+            Close
+          </button>
         </div>
       )
     }
