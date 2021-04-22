@@ -3,6 +3,7 @@ node_js:
   - 12 # uses version 12
 services:
   - postgresql # starts up postgres
+root: os
 addons:
   postgresql: '10' # recent postgres version on Travis
 dist: xenial # uses xenial environment
@@ -39,5 +40,6 @@ deploy: # see README for details on these keys
   # the secure key indicates an encrypted value; see README
   api_key:
     secure: XWj4LQsuObIhh/DyU6YhQKZ5Aa4sbehIZ9qs94PS+xenQpbVrUvOxXll2evu/BgZnCbeAgcD6rCRjkPcWybBqZ7MSSur0ONRgkKlHW8Mc+zwb2rjXFZjn8vcZKvHeDajnHJX8HhXr1iNOaQHtwUfebEowJnhiIPhZsEkXUgldanIq/1H7vOEk5KFxHMtmPK2/CNoy+SSZPDVAdr69yashdXNK0LIbifFJM5n/L+mX2JUq0w9wFxXWXSVYFxeo2dyFjKY/AOuum7H5zMXpxXjfUuHoAmWM6DZ2jeudgyor+RnnN/lC6l2704kJ1LowOncYw7V6XeifeMRw7Zf85imKPFhiy5mVndzWOeu/jBfrY3r46C8EHxkc43tJCacbiSRn2ZOf5y2V6w4x9zMaeSt8tqkUO0s74tFPi57UDJ+InKF3RxNWfpoPoe7LA3befB8bpAmPYJ1EEXBMMigHUGXVIMsf4mgqQQnYXuxmXRarrQWrcd/FkLP9xGkoNLrz3KSTGQYPV7Yfg17HvLniay3zz9hM1Xk1sf4/r/nckPYhXwwMIUJmyh0cmZeKacfNv8D0qs5fKMKujxLTkWRW6/Qb//0W0mY6UbO1HWBQ2fYs/yk1M6qzVZOBxCwFX5wCnytio9rzSHXAPlpd0LaZ9hk9Qtr5JpWh6mlnEJHFQn5Kps=
+  strategy: git
   on:
     branch: main
