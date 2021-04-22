@@ -21,7 +21,7 @@ before_deploy: # omit node_modules, since we set skip_cleanup below
   - rm -rf node_modules
 deploy: # see README for details on these keys
   # prevents travis from deleting the build
-  skip_cleanup: true
+  # skip_cleanup: true: now deprecated - cleanup is now false by default
   provider: heroku
   # app should be your heroku app name; see README
   app: needles-and-cones

@@ -101,7 +101,7 @@ const updateTravisYAML = (app, key) => {
   doc.set(
     'deploy',
     YAML.createNode({
-      skip_cleanup: true, //eslint-disable-line
+      // skip_cleanup: true, //eslint-disable-line
       provider: 'heroku',
       app: app,
       api_key: {secure: key} //eslint-disable-line
