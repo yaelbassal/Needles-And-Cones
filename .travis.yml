@@ -3,7 +3,6 @@ node_js:
   - 12 # uses version 12
 services:
   - postgresql # starts up postgres
-root: os
 addons:
   postgresql: '10' # recent postgres version on Travis
 dist: xenial # uses xenial environment
