@@ -104,7 +104,8 @@ const updateTravisYAML = (app, key) => {
       skip_cleanup: true, //eslint-disable-line
       provider: 'heroku',
       app: app,
-      api_key: {secure: key} //eslint-disable-line
+      api_key: {secure: key}, //eslint-disable-line
+      on: {branch: 'main'}
     })
   )
   doc.contents.items.filter(item => item.key in keyComments).forEach(item => {

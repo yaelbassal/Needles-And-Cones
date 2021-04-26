@@ -17,6 +17,20 @@ before_script:
 script:
   - npm test # test the code
   - npm run build-client # make the bundle
+  # before_deploy: # omit node_modules, since we set skip_cleanup below
+  #   - rm -rf node_modules
+  # deploy: # see README for details on these keys
+  #   # prevents travis from deleting the build
+  #   skip_cleanup: true
+  #   provider: heroku
+  #   # app should be your heroku app name; see README
+  #   app: needles-and-cones
+  # the secure key indicates an encrypted value; see README
+  # api_key:
+  #   secure: TyN/juPTCHSy3TLcW/emH9PlQnKpo1EmEVoSL7RzIwBfqnRn0UrFwEt8F+QgsDiSu85blO2Dqkz0ZkM9IxYKdHskbLA0f+RZg/iWbVhkvPafKF7PG7Jv89u94RsMmcFWAAprlgpoZbjMm41d7chv0YRno09e7AOe+veR2MLwwU5p2BL6yC83crEoWsz6FGpIpjcUEh2VWIlrO2kjb0BgyPTpB9BqPxCnFkv8s2bMQefj/fmtXE1pj9KHE1+m/y82K+lJWxM9364+l3x4tgKrtZg7cl491C/Klj0OEbCqYWk6kgaBcayK/eThaH51jZa99w0aUDf6fsJe4/8v9YkwRe0DnFY9uzNW/KZJEblP+gT2GELgrZUDGs+zNQzqFI/zkrMuX0DG2m1haGJ+z0mgurzw+ouz+7wCBFJpXpYctTz9edvf+zy0vbuHQbYBPxQX0nvjVH9mckm6Ifn7bR68cBtaXL//pwksNTbBggO+BkclxaKVvNdV/99bZU8C9YYEO1TKhivdNvR0p7skFgnkaTZhMRdYNOC7t17jDSDjgL2+BheIJlWW+XfeocWBAv45o8JdjQ3sphhGxnelQcH0+ueyJanLfUGYhDQfwm3GWppqnAN0rzP3L+moIhotyWJaIWxrFYnz4+WhfdxUl078bYij1Sjxj5r5mP+Tu8+iCKU=
+  # on:
+  #   repo: yaelbassal/Needles-And-Cones
+  #   branch: main
 before_deploy: # omit node_modules, since we set skip_cleanup below
   - rm -rf node_modules
 deploy: # see README for details on these keys
@@ -27,7 +41,6 @@ deploy: # see README for details on these keys
   app: needles-and-cones
   # the secure key indicates an encrypted value; see README
   api_key:
-    secure: TyN/juPTCHSy3TLcW/emH9PlQnKpo1EmEVoSL7RzIwBfqnRn0UrFwEt8F+QgsDiSu85blO2Dqkz0ZkM9IxYKdHskbLA0f+RZg/iWbVhkvPafKF7PG7Jv89u94RsMmcFWAAprlgpoZbjMm41d7chv0YRno09e7AOe+veR2MLwwU5p2BL6yC83crEoWsz6FGpIpjcUEh2VWIlrO2kjb0BgyPTpB9BqPxCnFkv8s2bMQefj/fmtXE1pj9KHE1+m/y82K+lJWxM9364+l3x4tgKrtZg7cl491C/Klj0OEbCqYWk6kgaBcayK/eThaH51jZa99w0aUDf6fsJe4/8v9YkwRe0DnFY9uzNW/KZJEblP+gT2GELgrZUDGs+zNQzqFI/zkrMuX0DG2m1haGJ+z0mgurzw+ouz+7wCBFJpXpYctTz9edvf+zy0vbuHQbYBPxQX0nvjVH9mckm6Ifn7bR68cBtaXL//pwksNTbBggO+BkclxaKVvNdV/99bZU8C9YYEO1TKhivdNvR0p7skFgnkaTZhMRdYNOC7t17jDSDjgL2+BheIJlWW+XfeocWBAv45o8JdjQ3sphhGxnelQcH0+ueyJanLfUGYhDQfwm3GWppqnAN0rzP3L+moIhotyWJaIWxrFYnz4+WhfdxUl078bYij1Sjxj5r5mP+Tu8+iCKU=
+    secure: KSUWmoHsmza7wXvZApf5HH8YNOMzOfbztQHVcwWswHQqj/OXBWj7UZaIwQkvL9C/YRixogebnS36TwUGIZCdTWqgE97ZvufS0gHN1Si0F+NUUzlMCCL/AQ6y5jyt3m8XhXEdGl4mQZgmMaol6kwl26eJpXRaFvQi/7JKSWSk7JGXchbFmJIcHlz8IEgDqX8RjIZ0bPaXmMzc4BEAbtY3FDqJX/SGneujclh9lm/sxrcKvSxKweRVHOEFWnC6SzJpCGSFrUpj1NsBDP2HwXCa3wjURqXJHZEE5TKj9aevghVsCLMifRDg91msnoa3jh0gHVtAlyJHSlprb9hD8IUwLwfIgMsBQFVzx9Es0paFjFMEyExE1CP729pnDIHz6BH+S7CsoGtKOk6FeC7MGdlZXDiZONlgy62cQGiV9nM7rtFy5R2yMbMOLZbQ8MymHfUPEAbvDNI1J9c0UClvh6DpjxFV588kUZISuYtoS0NwCyHAmZOPopGyvQKdfbC+1s74+1ni4unOBAwUfu6LQEy6aGX3PnMGq7Nz/M1iGqh7dWNPMPEaAG0i3XVCSdKos7Uhy3JqNLwb/fYvVDUlOjPEn/w+Bx5OxPgAGrwQPsL9jdIO9PRNgu/FnZoT915VU4eK6aVrjy42rQQ7AK6EpcgLAFeoS4ytjo9MPn6BnBF22W4=
   on:
-    repo: yaelbassal/Needles-And-Cones
     branch: main
