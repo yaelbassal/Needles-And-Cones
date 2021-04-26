@@ -105,6 +105,7 @@ const updateTravisYAML = (app, key) => {
       provider: 'heroku',
       app: app,
       api_key: {secure: key}, //eslint-disable-line
+      // api_key: {secure: process.env.API_KEY},
       on: {branch: 'main'}
     })
   )
