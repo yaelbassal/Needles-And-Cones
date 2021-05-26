@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {fetchJournal} from '../store/journal'
 
@@ -9,10 +8,29 @@ import {fetchJournal} from '../store/journal'
 class Journal extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      selectedTree: '',
+      entryName: '',
+      entryNotes: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   componentDidMount() {
     this.props.getJournal()
+  }
+
+  handleChange(event) {
+    const name = event.target.name
+    const value = event.target.value
+    this.setState({[name]: value})
+  }
+
+  handleSubmit(event) {
+    //code here explaining what to do at submission. Thunk action here - not yet written.
+    console.log('handle submit', this.state)
+    event.preventDefault()
   }
 
   render() {
@@ -22,15 +40,103 @@ class Journal extends Component {
 
     return (
       <div>
-        <div>
-          <h3>Welcome, {user.name}</h3>
+        <div className="journal-container">
+          <header>
+            <h2>My Tree Journal</h2>
+          </header>
+          <main>
+            {journal ? (
+              <div className="entries-container">
+                <section>
+                  <h3>Eastern White Pine</h3>
+                  <p>Entry Name: {journal.entry_name_1}</p>
+                  <p>Notes: {journal.entry_note_1}</p>
+                </section>
+                <section>
+                  <h3>Pitch Pine</h3>
+                  <p>Entry Name: {journal.entry_name_2}</p>
+                  <p>Notes: {journal.entry_note_2}</p>
+                </section>
+                <section>
+                  <h3>Red Pine</h3>
+                  <p>Entry Name: {journal.entry_name_3}</p>
+                  <p>Notes: {journal.entry_note_3}</p>
+                </section>
+                <section>
+                  <h3>Japanese Black Pine</h3>
+                  <p>Entry Name: {journal.entry_name_4}</p>
+                  <p>Notes: {journal.entry_note_4}</p>
+                </section>
+                <section>
+                  <h3>Austrian Pine</h3>
+                  <p>Entry Name: {journal.entry_name_5}</p>
+                  <p>Notes: {journal.entry_note_5}</p>
+                </section>
+                <section>
+                  <h3>Jack Pine</h3>
+                  <p>Entry Name: {journal.entry_name_6}</p>
+                  <p>Notes: {journal.entry_note_6}</p>
+                </section>
+                <section>
+                  <h3>Mugo Pine</h3>
+                  <p>Entry Name: {journal.entry_name_7}</p>
+                  <p>Notes: {journal.entry_note_7}</p>
+                </section>
+                <section>
+                  <h3>Scotch Pine</h3>
+                  <p>Entry Name: {journal.entry_name_8}</p>
+                  <p>Notes: {journal.entry_note_8}</p>
+                </section>
+              </div>
+            ) : (
+              <p>Journal Information Are Not Currently Available</p>
+            )}
+          </main>
         </div>
-        <div>
-          {journal ? (
-            <h1>{journal.createdAt}</h1>
-          ) : (
-            <p>Journal Information Are Not Currently Available</p>
-          )}
+        {/* journal entry update form */}
+        <div className="journal-form-container">
+          <header>
+            <h2>Add some notes!</h2>
+          </header>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Choose a tree:
+              <select
+                name="selectedTree"
+                value={this.state.selectedTree}
+                onChange={this.handleChange}
+              >
+                <option value="" />
+                <option value="eastern-white-pine">Eastern White Pine</option>
+                <option value="pitch-pine">Pitch Pine</option>
+                <option value="red-pine">Red Pine</option>
+                <option value="japanese-black-pine">Japanese Black Pine</option>
+                <option value="austrian-pine">Austrian Pine</option>
+                <option value="jack-pine">Jack Pine</option>
+                <option value="mugo-pine">Mugo Pine</option>
+                <option value="scotch-pine">Scotch Pine</option>
+              </select>
+            </label>
+            <label>
+              Update entry name:
+              <input
+                type="text"
+                name="entryName"
+                value={this.state.entryName}
+                onChange={this.handleChange}
+              />
+            </label>
+            <label>
+              Update entry notes:
+              <input
+                type="text"
+                name="entryNotes"
+                value={this.state.entryNotes}
+                onChange={this.handleChange}
+              />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
         </div>
       </div>
     )
@@ -54,15 +160,3 @@ const mapDispatch = dispatch => {
 }
 
 export default connect(mapState, mapDispatch)(Journal)
-
-/**
- * PROP TYPES
- */
-Journal.propTypes = {
-  email: PropTypes.string
-}
-
-//next steps:
-//1. style journal page
-//add functionality to add new entries/put request
-//add functionality to take away entries.
