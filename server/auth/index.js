@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const User = require('../db/models/user')
+const {User} = require('../db/models')
 module.exports = router
 
 router.post('/login', async (req, res, next) => {
@@ -12,7 +12,17 @@ router.post('/login', async (req, res, next) => {
       console.log('Incorrect password for user:', req.body.email)
       res.status(401).send('Wrong username and/or password')
     } else {
+      /*
+      Passport exposes a login() function on req (also aliased as logIn()) that can be used to establish a login session.
+
+      When the login operation completes, user will be assigned to req.user.
+
+      req.login() can be invoked to automatically log in the newly registered user
+      */
+
       req.login(user, err => (err ? next(err) : res.json(user)))
+      console.log('this is req.user', req.user)
+      console.log('this is req.body', req.body)
     }
   } catch (err) {
     next(err)
