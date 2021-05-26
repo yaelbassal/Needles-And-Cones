@@ -16,7 +16,7 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-//mounted on /api/trees/:treeId b/c of router.use in '/api/index.js' in server.
+//mounted on /api/trees/:treeId b/c of router.use in '/api/index.js' in server middleware.
 router.get('/:treeId', async (req, res, next) => {
   try {
     const tree = await Tree_Type.findByPk(req.params.treeId)
