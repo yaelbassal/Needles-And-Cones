@@ -47,7 +47,7 @@ class Journal extends Component {
     const journal = this.props.journal[0]
 
     return (
-      <div>
+      <div className="journal-outer-container">
         <div className="journal-container">
           <header>
             <h2>My Tree Journal</h2>
@@ -136,7 +136,8 @@ class Journal extends Component {
             </label>
             <label>
               Update entry notes:
-              <input
+              <br />
+              <textarea
                 type="text"
                 name="entryNotes"
                 value={this.state.entryNotes}

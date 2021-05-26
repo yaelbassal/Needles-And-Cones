@@ -197,3 +197,10 @@ form div {
   display: block;
   margin: auto;
 }
+
+/* JOURNAL COMPONENT */
+
+.journal-outer-container {
+  display: flex;
+  justify-content: center;
+}
