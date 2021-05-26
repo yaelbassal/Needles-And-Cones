@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {fetchJournal} from '../store/journal'
+import {fetchJournal, updateJournalEntry} from '../store/journal'
 
 /**
  * COMPONENT
@@ -27,16 +27,24 @@ class Journal extends Component {
     this.setState({[name]: value})
   }
 
-  handleSubmit(event) {
-    //code here explaining what to do at submission. Thunk action here - not yet written.
-    console.log('handle submit', this.state)
+  async handleSubmit(event) {
     event.preventDefault()
+    try {
+      await this.props.updateJournalEntry(this.state)
+      this.setState({
+        selectedTree: '',
+        entryName: '',
+        entryNotes: ''
+      })
+      //added getJournal() thunk to update state. Look into why it is not working without it. updateJournalEntry() should be doing the same.
+      await this.props.getJournal()
+    } catch (err) {
+      console.log(error)
+    }
   }
 
   render() {
-    const user = this.props.user
     const journal = this.props.journal[0]
-    console.log('this is journal', journal)
 
     return (
       <div>
@@ -155,7 +163,8 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getJournal: () => dispatch(fetchJournal())
+    getJournal: () => dispatch(fetchJournal()),
+    updateJournalEntry: entryInfo => dispatch(updateJournalEntry(entryInfo))
   }
 }
 
