@@ -202,5 +202,46 @@ form div {
 
 .journal-outer-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: baseline;
+  margin: 1em;
+}
+
+.journal-container {
+  text-align: center;
+  color: rgb(219, 186, 88);
+  background-color: rgb(75, 118, 65);
+  padding: 0.5em 1em 0.5em;
+  border-radius: 10px;
+  overflow-y: scroll;
+  height: 75vh;
+  width: 40%;
+}
+
+.journal-container section {
+  text-align: left;
+  color: black;
+  background-color: #ffffcc;
+  padding: 0.5em 1em 0.5em;
+  border: 2px solid rgb(219, 186, 88);
+  border-radius: 10px;
+  word-wrap: normal;
+}
+
+.journal-form-container form {
+  background-color: #ffffcc;
+  padding: 1.5em;
+  border: 2px solid rgb(75, 118, 65);
+}
+
+.journal-form-container input,
+select {
+  margin-left: 5px;
+}
+
+textarea {
+  min-width: 100%;
+  resize: inherit;
+  height: 25vh;
+  overflow-y: scroll;
 }
