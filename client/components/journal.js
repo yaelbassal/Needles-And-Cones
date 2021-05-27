@@ -47,7 +47,8 @@ class Journal extends Component {
     const journal = this.props.journal[0]
 
     return (
-      <div>
+      <div className="journal-outer-container">
+        {/* journal content */}
         <div className="journal-container">
           <header>
             <h2>My Tree Journal</h2>
@@ -125,20 +126,25 @@ class Journal extends Component {
                 <option value="scotch-pine">Scotch Pine</option>
               </select>
             </label>
+            <br />
             <label>
               Update entry name:
               <input
                 type="text"
                 name="entryName"
+                placeholder="update entry name"
                 value={this.state.entryName}
                 onChange={this.handleChange}
               />
             </label>
+            <br />
             <label>
               Update entry notes:
-              <input
+              <br />
+              <textarea
                 type="text"
                 name="entryNotes"
+                placeholder="write your notes here"
                 value={this.state.entryNotes}
                 onChange={this.handleChange}
               />
