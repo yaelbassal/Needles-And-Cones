@@ -1,34 +1,39 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
 
 /**
  * COMPONENT
  */
-export const About = props => {
-  const {email} = props
-
+export const About = () => {
   return (
-    <div>
-      <h3>Welcome, {email}</h3>
+    <div className="about-outer-container">
+      <br />
+      <div className="about-container">
+        <h1>About</h1>
+        <section className="about-description-container">
+          <p>
+            Welcome to Needles And Cones! Needles And Cones is an educational
+            web application aimed to help nature enthusiasts learn about the
+            different pine tree species in Massachusetts. The idea arose from
+            listening to arborists and nature lovers from the region share their
+            challenges around differentiating between the different species of
+            pine trees.
+          </p>
+          <h3>How does it work?</h3>
+          <p>
+            Any site visitor can identify a pine using an interactive tree
+            identification key. Just navigate to “Find My Pine” in the
+            navigation bar. Or, If you’d prefer to browse through tree
+            information, just visit the “Learn” link.
+          </p>
+          <p>
+            If you create an account, you’ll get a more personal experience and
+            get to save your pine tree findings in your very own tree journal!
+          </p>
+          <p>
+            So, don’t pine over that confusing pine! Let’s go figure it out!
+          </p>
+        </section>
+      </div>
     </div>
   )
-}
-
-/**
- * CONTAINER
- */
-const mapState = state => {
-  return {
-    email: state.user.email
-  }
-}
-
-export default connect(mapState)(About)
-
-/**
- * PROP TYPES
- */
-About.propTypes = {
-  email: PropTypes.string
 }
