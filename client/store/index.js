@@ -13,11 +13,12 @@ const reducer = combineReducers({
   tree: singleTreeReducer,
   journal: journalReducer
 })
-console.log('This is reducer', reducer)
+
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
 )
 const store = createStore(reducer, middleware)
 
 export default store
+//You re-export all exports of the imported module using the * syntax
 export * from './user'

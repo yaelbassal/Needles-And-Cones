@@ -25,7 +25,7 @@ router.get('/', async (req, res, next) => {
 router.put('/', async (req, res, next) => {
   try {
     let findJournal
-    console.log(req.body)
+    console.log('req.body in api', req.body)
     if (req.user) {
       if (req.body.selectedTree === 'eastern-white-pine') {
         findJournal = await Journal.update(

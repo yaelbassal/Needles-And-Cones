@@ -5,9 +5,7 @@ import {Link} from 'react-router-dom'
 import {fetchAllTrees} from '../store/tree-types'
 
 class Learn extends Component {
-  constructor() {
-    super()
-  }
+  // We do not need --> constructor() { super()} because of the connection to the redux store.
 
   componentDidMount() {
     this.props.getTrees()

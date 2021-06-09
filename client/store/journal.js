@@ -21,7 +21,7 @@ export const fetchJournal = () => {
     try {
       //fetch data using api
       const {data} = await axios.get('/api/journal')
-      //dispatch the action creator to the reducer
+      //dispatches the action creator to the reducer. dispatch is a function of the Redux store. You call store.dispatch to dispatch an action. This is the only way to trigger a state change.
       dispatch(setJournal(data))
     } catch (err) {
       console.log(err)

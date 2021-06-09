@@ -5,10 +5,9 @@ import {fetchTree} from '../store/single-tree'
 import Buttons from './buttons'
 
 class LearnSingleTree extends Component {
-  constructor(props) {
-    super(props)
-  }
+  //If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component. We do not need to us constructor(props) {super(props)}.
 
+  //we can add lifecycle methods in stateful components only unless using React hooks.
   componentDidMount() {
     const treeId = this.props.match.params.treeId
     this.props.getTree(treeId)
