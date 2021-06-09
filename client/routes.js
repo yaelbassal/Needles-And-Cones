@@ -26,6 +26,7 @@ class Routes extends Component {
     const {isLoggedIn} = this.props
 
     return (
+      //Switch component is used when we want to pick only one <Route> to render. The <Switch /> component will only render the first route that matches/includes the path. Without the Switch component, Router component renders routes inclusively.
       <Switch>
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
@@ -38,7 +39,8 @@ class Routes extends Component {
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
-            <Route path="/home" component={UserHome} />
+            <Route exact path="/" component={UserHome} />
+            <Route exact path="/home" component={UserHome} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
@@ -60,8 +62,10 @@ const mapState = state => {
 }
 
 const mapDispatch = dispatch => {
+  //By default, a connected component to the Redux store receives props.dispatch and can dispatch actions itself.
   return {
     loadInitialData() {
+      //me() is a thunk from user.js in the store directory. It is re-exported from store/index.js.
       dispatch(me())
     }
   }
