@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize')
-//db connects to Postgres
 const db = require('../db')
 
 const Journal = db.define('journal', {

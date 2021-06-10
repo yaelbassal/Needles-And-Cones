@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize')
-//db connects to PostgreSQL
 const db = require('../db')
 
 const Tree_Type = db.define('tree_type', {
