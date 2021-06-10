@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const compression = require('compression')
 const session = require('express-session')
 const passport = require('passport')
+//connect-session-sequelize is a SQL session store using Sequelize.js.
 const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const {db} = require('./db')
 const sessionStore = new SequelizeStore({db})
@@ -52,6 +53,8 @@ const createApp = () => {
   app.use(compression())
 
   // session middleware with passport
+  //To avoid storing massive amounts of information in-browser, developers use session IDs to store information server-side while enabling user privacy. Every time a user takes an action or makes a request on a web application, the application sends the session ID and cookie ID back to the server, along with a description of the action itself.
+  //The session middleware handles all things for us, i.e., creating the session, setting the session cookie and creating the session object in req object. Whenever we make a request from the same client again, we will have their session information stored with us (given that the server was not restarted).
   app.use(
     session({
       secret: process.env.SESSION_SECRET || 'my best friend is Cody',
