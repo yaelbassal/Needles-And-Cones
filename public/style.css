@@ -258,15 +258,17 @@ textarea {
   height: 100vh;
 }
 
-.about-container h1 {
+.about-title h1 {
+  position: relative;
   display: block;
   text-align: center;
-  max-width: 10%;
+  max-width: 12%;
   margin: 0 auto;
   padding: 25px;
   color: rgb(219, 186, 88);
   background-color: rgb(75, 118, 65);
   border-radius: 10px;
+  font-size: 200%;
 }
 
 .about-description-container {
