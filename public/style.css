@@ -3,24 +3,17 @@ body {
   background-color: rgb(219, 186, 88);
 }
 
+/* AUTH-FORM AND NAVBAR COMPONENTS*/
 a {
   text-decoration: none;
   color: rgb(75, 118, 65);
   font-weight: bold;
 }
 
-label {
-  display: block;
-}
-
+/* NAVBAR COMPONENT*/
 nav a {
   display: inline-block;
   margin: 1em;
-}
-
-form div {
-  margin: 1em;
-  display: inline-block;
 }
 
 .navbar {
@@ -38,6 +31,16 @@ form div {
   align-items: center;
 }
 
+/* AUTH-FORM COMPONENT*/
+label {
+  display: block;
+}
+
+form div {
+  margin: 1em;
+  display: inline-block;
+}
+
 .form {
   background-color: rgb(75, 118, 65);
   padding-left: 5em;
@@ -53,6 +56,10 @@ form div {
   color: white;
   padding: 1em;
   font-size: large;
+  border: white 2px solid;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 1em;
 }
 
 .loginAndSignUpImage {
@@ -122,31 +129,30 @@ form div {
   margin: 15px;
 }
 
+.single-tree-image,
+.single-tree-description {
+  border: 2px solid rgb(245, 242, 242);
+  border-radius: 10px;
+  margin: auto;
+}
+
 .single-tree-image {
   position: relative;
   width: 658px;
   height: 550px;
-  border: 2px solid rgb(245, 242, 242);
-  border-radius: 10px;
-  margin: auto;
 }
 
 .single-tree-description {
   width: 557px;
   color: black;
   background-color: rgb(219, 186, 88);
-  border: 2px solid rgb(245, 242, 242);
-  border-radius: 10px;
-  margin: auto;
   padding: 50px;
 }
 
 .sources-list {
   text-align: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin: 0 10px;
+  padding: 50px 0;
   word-wrap: break-word;
 }
 
@@ -246,7 +252,7 @@ textarea {
   overflow-y: scroll;
 }
 
-/* ABOUT COMPONENT */
+/* ABOUT AND HOME COMPONENTS */
 
 .about-outer-container,
 .home-outer-container {
@@ -259,11 +265,13 @@ textarea {
   height: 100vh;
 }
 
+/* ABOUT COMPONENT */
+
 .about-title h1 {
   position: relative;
-  display: block;
-  text-align: center;
   max-width: 12%;
+  text-align: center;
+  display: block;
   margin: 0 auto;
   padding: 25px;
   color: rgb(219, 186, 88);
@@ -304,12 +312,16 @@ textarea {
   border-radius: 100%;
 }
 
+.home-options,
+.quote {
+  background-color: rgb(219, 186, 88);
+}
+
 .home-options {
   padding: 0.5em 3em;
   margin: 2em;
   display: flex;
   flex-direction: column;
-  background-color: rgb(219, 186, 88);
   border-radius: 5px;
   width: 50%;
 }
@@ -320,8 +332,6 @@ textarea {
 
 .line {
   border: 4px solid rgb(75, 118, 65);
-  border-radius: 5px;
-  background-color: rgb(219, 186, 88);
 }
 
 .quote {
@@ -331,5 +341,4 @@ textarea {
   font-style: italic;
   border: rgb(75, 118, 65) solid 4px;
   border-radius: 10px;
-  background-color: rgb(219, 186, 88);
 }

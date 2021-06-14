@@ -30,24 +30,18 @@ const AuthForm = props => {
             <div>
               {displayName === 'Sign Up' && (
                 <div id="full-name">
-                  <label htmlFor="fullname">
-                    <medium>Full Name</medium>
-                  </label>
+                  <label htmlFor="fullname">Full Name</label>
                   <input name="fullname" type="text" />
                 </div>
               )}
             </div>
             <br />
             <div>
-              <label htmlFor="email">
-                <medium>Email</medium>
-              </label>
+              <label htmlFor="email">Email</label>
               <input name="email" type="text" />
             </div>
             <div>
-              <label htmlFor="password">
-                <medium>Password</medium>
-              </label>
+              <label htmlFor="password">Password</label>
               <input name="password" type="password" />
             </div>
             <div>
