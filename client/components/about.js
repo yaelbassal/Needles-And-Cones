@@ -8,7 +8,9 @@ export const About = () => {
     <div className="about-outer-container">
       <br />
       <div className="about-container">
-        <h1>About</h1>
+        <section className="about-title">
+          <h1>About</h1>
+        </section>
         <section className="about-description-container">
           <p>
             Welcome to Needles And Cones! Needles And Cones is an educational
