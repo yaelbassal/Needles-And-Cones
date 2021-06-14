@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {HomeOptions} from './home-options'
 
 /**
  * COMPONENT
@@ -10,13 +11,15 @@ export const UserHome = props => {
 
   return (
     <div>
-      {name != null || name != undefined ? (
+      {name ? (
         <div>
-          <h3>Welcome, {name}</h3>
+          <h2>Hello, {name}! What would you like to do?</h2>
+          <HomeOptions />
         </div>
       ) : (
         <div>
-          <h3>Welcome, {email}</h3>
+          <h2>Hello, {email}! What would you like to do?</h2>
+          <HomeOptions />
         </div>
       )}
     </div>
