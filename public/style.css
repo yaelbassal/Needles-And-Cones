@@ -248,7 +248,8 @@ textarea {
 
 /* ABOUT COMPONENT */
 
-.about-outer-container {
+.about-outer-container,
+.home-outer-container {
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
@@ -282,4 +283,53 @@ textarea {
   margin: 15px auto;
 }
 
-/* ABOUT COMPONENT */
+/* HOME COMPONENT */
+
+.home-greeting {
+  background-color: rgb(75, 118, 65);
+  color: rgb(219, 186, 88);
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.home-options-outer-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-options-outer-container img {
+  width: 30%;
+  height: auto;
+  margin: 3em;
+  border-radius: 100%;
+}
+
+.home-options {
+  padding: 0.5em 3em;
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(219, 186, 88);
+  border-radius: 5px;
+  width: 50%;
+}
+
+.home-options span {
+  font-size: 50px;
+}
+
+.line {
+  border: 4px solid rgb(75, 118, 65);
+  border-radius: 5px;
+  background-color: rgb(219, 186, 88);
+}
+
+.quote {
+  margin: 5em 2em;
+  padding: 2em 4em;
+  color: black;
+  font-style: italic;
+  border: rgb(75, 118, 65) solid 4px;
+  border-radius: 10px;
+  background-color: rgb(219, 186, 88);
+}

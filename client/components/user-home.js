@@ -10,15 +10,19 @@ export const UserHome = props => {
   const {email, name} = props
 
   return (
-    <div>
+    <div className="home-outer-container">
       {name ? (
         <div>
-          <h2>Hello, {name}! What would you like to do?</h2>
+          <h2 className="home-greeting">
+            Hello, {name}! What would you like to do?
+          </h2>
           <HomeOptions />
         </div>
       ) : (
         <div>
-          <h2>Hello, {email}! What would you like to do?</h2>
+          <h2 className="home-greeting">
+            Hello, {email}! What would you like to do?
+          </h2>
           <HomeOptions />
         </div>
       )}
