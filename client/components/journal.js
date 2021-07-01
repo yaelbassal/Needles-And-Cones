@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {fetchJournal, updateJournalEntry} from '../store/journal'
+import {autoComplete} from '../util/autoComplete'
 
 /**
  * COMPONENT
@@ -15,16 +16,47 @@ class Journal extends Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.checkAutoComplete = this.checkAutoComplete.bind(this)
   }
 
   componentDidMount() {
     this.props.getJournal()
   }
 
+  // componentDidUpdate(){
+  //   this.checkAutoComplete(this.state.selectedTree)
+  // }
+
   handleChange(event) {
     const name = event.target.name
     const value = event.target.value
-    this.setState({[name]: value})
+    this.setState(
+      {[name]: value},
+      this.checkAutoComplete(this.state.selectedTree)
+    )
+  }
+
+  checkAutoComplete(selectedTreeVal) {
+    let journalI = this.props.journal[0]
+    console.log('this is journal', journalI)
+
+    let autoCompleteValues
+
+    if (
+      selectedTreeVal !== '' &&
+      this.state.entryName === '' &&
+      this.state.entryNotes === ''
+    ) {
+      autoCompleteValues = autoComplete(this.state.selectedTree)
+    }
+
+    if (autoCompleteValues) {
+      let n = autoCompleteValues[0]
+      let N = autoCompleteValues[1]
+      this.setState({
+        entryName: journalI.n
+      })
+    }
   }
 
   async handleSubmit(event) {
