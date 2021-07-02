@@ -11,7 +11,6 @@ class Journal extends Component {
     super(props)
     this.state = {
       selectedTree: '',
-      entryName: '',
       entryNotes: ''
     }
     this.handleChange = this.handleChange.bind(this)
@@ -34,15 +33,16 @@ class Journal extends Component {
       stateUpdates = this.checkAutoComplete(value)
     }
 
+    //if a user has selected from a dropdown option, update this.state.selectedTree and this.state.entryNotes. Allows for a dynamic form with autocompletion.
     if (stateUpdates) {
-      let entryName = journalFromProps[stateUpdates.entryName]
       let note = journalFromProps[stateUpdates.entryNote]
 
       this.setState({
         [name]: value,
-        entryName: entryName ? entryName : '',
+        //if "note" is null or undefined, set the state to an empty string. It is not the best practice to have state as null or undefined.
         entryNotes: note ? note : ''
       })
+      //otherwise....a user is updating the notes section. Only update the entryNotes part of state.
     } else {
       this.setState({[name]: value})
     }
@@ -50,10 +50,6 @@ class Journal extends Component {
 
   checkAutoComplete(val) {
     let result
-
-    // if(this.state.entryName === "" && this.state.entryNotes === ""){
-    //   result = autoComplete(val)
-    // }
 
     result = autoComplete(val)
 
@@ -66,13 +62,12 @@ class Journal extends Component {
       await this.props.updateJournalEntry(this.state)
       this.setState({
         selectedTree: '',
-        entryName: '',
         entryNotes: ''
       })
       //added getJournal() thunk to update state. Look into why it is not working without it. updateJournalEntry() should be doing the same.
       await this.props.getJournal()
     } catch (err) {
-      console.log(error)
+      console.log(err)
     }
   }
 
@@ -91,42 +86,37 @@ class Journal extends Component {
               <div className="entries-container">
                 <section>
                   <h3>Eastern White Pine</h3>
-                  <p>Entry Name: {journal.entry_name_1}</p>
-                  <p>Notes: {journal.entry_note_1}</p>
+                  <p>
+                    <strong>Notes: </strong>
+                    {journal.entry_note_1}
+                  </p>
                 </section>
                 <section>
                   <h3>Pitch Pine</h3>
-                  <p>Entry Name: {journal.entry_name_2}</p>
                   <p>Notes: {journal.entry_note_2}</p>
                 </section>
                 <section>
                   <h3>Red Pine</h3>
-                  <p>Entry Name: {journal.entry_name_3}</p>
                   <p>Notes: {journal.entry_note_3}</p>
                 </section>
                 <section>
                   <h3>Japanese Black Pine</h3>
-                  <p>Entry Name: {journal.entry_name_4}</p>
                   <p>Notes: {journal.entry_note_4}</p>
                 </section>
                 <section>
                   <h3>Austrian Pine</h3>
-                  <p>Entry Name: {journal.entry_name_5}</p>
                   <p>Notes: {journal.entry_note_5}</p>
                 </section>
                 <section>
                   <h3>Jack Pine</h3>
-                  <p>Entry Name: {journal.entry_name_6}</p>
                   <p>Notes: {journal.entry_note_6}</p>
                 </section>
                 <section>
                   <h3>Mugo Pine</h3>
-                  <p>Entry Name: {journal.entry_name_7}</p>
                   <p>Notes: {journal.entry_note_7}</p>
                 </section>
                 <section>
                   <h3>Scotch Pine</h3>
-                  <p>Entry Name: {journal.entry_name_8}</p>
                   <p>Notes: {journal.entry_note_8}</p>
                 </section>
               </div>
@@ -158,17 +148,6 @@ class Journal extends Component {
                 <option value="mugo-pine">Mugo Pine</option>
                 <option value="scotch-pine">Scotch Pine</option>
               </select>
-            </label>
-            <br />
-            <label>
-              Update entry name:
-              <input
-                type="text"
-                name="entryName"
-                placeholder="update entry name"
-                value={this.state.entryName}
-                onChange={this.handleChange}
-              />
             </label>
             <br />
             <label>
