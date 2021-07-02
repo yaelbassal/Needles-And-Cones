@@ -93,31 +93,47 @@ class Journal extends Component {
                 </section>
                 <section>
                   <h3>Pitch Pine</h3>
-                  <p>Notes: {journal.entry_note_2}</p>
+                  <p>
+                    <strong>Notes: </strong> {journal.entry_note_2}
+                  </p>
                 </section>
                 <section>
                   <h3>Red Pine</h3>
-                  <p>Notes: {journal.entry_note_3}</p>
+                  <p>
+                    <strong>Notes: </strong>
+                    {journal.entry_note_3}
+                  </p>
                 </section>
                 <section>
                   <h3>Japanese Black Pine</h3>
-                  <p>Notes: {journal.entry_note_4}</p>
+                  <p>
+                    <strong>Notes: </strong> {journal.entry_note_4}
+                  </p>
                 </section>
                 <section>
                   <h3>Austrian Pine</h3>
-                  <p>Notes: {journal.entry_note_5}</p>
+                  <p>
+                    <strong>Notes: </strong> {journal.entry_note_5}
+                  </p>
                 </section>
                 <section>
                   <h3>Jack Pine</h3>
-                  <p>Notes: {journal.entry_note_6}</p>
+                  <p>
+                    <strong>Notes: </strong> {journal.entry_note_6}
+                  </p>
                 </section>
                 <section>
                   <h3>Mugo Pine</h3>
-                  <p>Notes: {journal.entry_note_7}</p>
+                  <p>
+                    <strong>Notes: </strong>
+                    {journal.entry_note_7}
+                  </p>
                 </section>
                 <section>
                   <h3>Scotch Pine</h3>
-                  <p>Notes: {journal.entry_note_8}</p>
+                  <p>
+                    <strong>Notes: </strong> {journal.entry_note_8}
+                  </p>
                 </section>
               </div>
             ) : (
