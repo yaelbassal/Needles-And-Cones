@@ -23,40 +23,41 @@ class Journal extends Component {
     this.props.getJournal()
   }
 
-  // componentDidUpdate(){
-  //   this.checkAutoComplete(this.state.selectedTree)
-  // }
-
   handleChange(event) {
+    const journalFromProps = this.props.journal[0]
     const name = event.target.name
     const value = event.target.value
-    this.setState(
-      {[name]: value},
-      this.checkAutoComplete(this.state.selectedTree)
-    )
+
+    let stateUpdates
+
+    if (name === 'selectedTree') {
+      stateUpdates = this.checkAutoComplete(value)
+    }
+
+    if (stateUpdates) {
+      let entryName = journalFromProps[stateUpdates.entryName]
+      let note = journalFromProps[stateUpdates.entryNote]
+
+      this.setState({
+        [name]: value,
+        entryName: entryName ? entryName : '',
+        entryNotes: note ? note : ''
+      })
+    } else {
+      this.setState({[name]: value})
+    }
   }
 
-  checkAutoComplete(selectedTreeVal) {
-    let journalI = this.props.journal[0]
-    console.log('this is journal', journalI)
+  checkAutoComplete(val) {
+    let result
 
-    let autoCompleteValues
+    // if(this.state.entryName === "" && this.state.entryNotes === ""){
+    //   result = autoComplete(val)
+    // }
 
-    if (
-      selectedTreeVal !== '' &&
-      this.state.entryName === '' &&
-      this.state.entryNotes === ''
-    ) {
-      autoCompleteValues = autoComplete(this.state.selectedTree)
-    }
+    result = autoComplete(val)
 
-    if (autoCompleteValues) {
-      let n = autoCompleteValues[0]
-      let N = autoCompleteValues[1]
-      this.setState({
-        entryName: journalI.n
-      })
-    }
+    return result
   }
 
   async handleSubmit(event) {

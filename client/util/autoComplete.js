@@ -29,17 +29,19 @@ const journalInfo = [
   }
 ]
 
-function autoComplete(selectedTree) {
-  let result = []
+//autoComplete function returns an object with the names of the keys from journal props obj for a given input value from the select dropdown menu. These keys are needed to reference a selection's values.
+function autoComplete(val) {
+  let autoCompleteKeys = {}
 
   for (let i = 0; i < journalInfo.length; i++) {
-    if (journalInfo[i].treeName === selectedTree) {
-      result.push(journalInfo[i].entryName)
-      result.push(journalInfo[i].entryNote)
+    //keys for a selected tree are inserted into the autoCompleteKeys object as values.
+    if (journalInfo[i].treeName === val) {
+      autoCompleteKeys.entryName = journalInfo[i].entryName
+      autoCompleteKeys.entryNote = journalInfo[i].entryNote
     }
   }
-
-  return result
+  //example of a return {entryName: "entry_name_2", entryNote: "entry_note_2"}
+  return autoCompleteKeys
 }
 
 export {autoComplete}
