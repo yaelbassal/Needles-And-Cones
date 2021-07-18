@@ -1,7 +1,8 @@
 //Pine Tree Identification Chart Information
 
 const pineIdChart = {
-  name: "Does the tree have needle-like leaves and bear cones? It's a pine!",
+  name:
+    "Does the tree have needle-like leaves and bear cones? It's a pine! You're off to a great start. Click the brown box!",
   children: [
     {
       name: 'Are the needles in bundles of 2?',
