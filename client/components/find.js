@@ -15,6 +15,7 @@ const renderRectSvgNode = ({nodeDatum, toggleNode, foreignObjectProps}) => (
       onClick={toggleNode}
       fill="chocolate"
     />
+    {/* leverage the foreignObject tag to render HTML inside the SVG namespace  */}
     <foreignObject {...foreignObjectProps}>
       <div className="foreign-object">
         <h3>{nodeDatum.name}</h3>
@@ -27,8 +28,8 @@ const renderRectSvgNode = ({nodeDatum, toggleNode, foreignObjectProps}) => (
 /**
  * COMPONENT
  */
-//up to here for styling updates.
 export const Find = () => {
+  //nodeSize variable stores values for width and height for the foreignObject
   const nodeSize = {x: 200, y: 200}
   const foreignObjectProps = {width: nodeSize.x, height: nodeSize.y, x: 20}
   return (
@@ -41,11 +42,14 @@ export const Find = () => {
           data={pineIdChart}
           orientation="vertical"
           separation={{nonSiblings: 3, siblings: 2}}
-          translate={{x: 800, y: 100}}
+          translate={{x: 750, y: 50}}
           scaleExtent={{min: 0.7, max: 0.7}}
-          renderCustomNodeElement={rd3tProps =>
-            renderRectSvgNode({...rd3tProps, foreignObjectProps})
+          //The renderCustomNodeElement prop accepts a custom render function that will be used for every node in the tree
+          renderCustomNodeElement=//rd3tNodeProps are props from the custom node line #9 and 10. rd3tNodeProps are the properties that are passed to the user-defined renderCustomNodeElement render function. Double check this understandiing.
+          {rd3tNodeProps =>
+            renderRectSvgNode({...rd3tNodeProps, foreignObjectProps})
           }
+          //Determines the spacing between parent & child nodes.
           depthFactor="200"
         />
       </div>
