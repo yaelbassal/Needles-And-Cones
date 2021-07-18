@@ -354,7 +354,7 @@ textarea {
 }
 
 .foreign-object {
-  border: 1px solid black;
+  border: 2px solid black;
   background: #dedede;
   text-align: center;
   margin: 10px;

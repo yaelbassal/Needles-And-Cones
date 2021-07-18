@@ -5,6 +5,7 @@ import {pineIdChart} from '../config'
 
 // Here we're using `renderCustomNodeElement` to represent each node
 // as an SVG `rect` instead of the default `circle`.The <rect> element is a basic SVG shape that draws rectangles, defined by their position, width, and height. The rectangles may have their corners rounded.
+//Scalable Vector Graphics is an Extensible Markup Language-based vector image format for two-dimensional graphics with support for interactivity and animation
 
 const renderRectSvgNode = ({nodeDatum, toggleNode, foreignObjectProps}) => (
   <g>
@@ -18,8 +19,8 @@ const renderRectSvgNode = ({nodeDatum, toggleNode, foreignObjectProps}) => (
     {/* leverage the foreignObject tag to render HTML inside the SVG namespace  */}
     <foreignObject {...foreignObjectProps}>
       <div className="foreign-object">
-        <h3>{nodeDatum.name}</h3>
-        {nodeDatum.attributes ? <h3>{nodeDatum.attributes.result}</h3> : <br />}
+        <p>{nodeDatum.name}</p>
+        {nodeDatum.attributes ? <p>{nodeDatum.attributes.result}</p> : <br />}
       </div>
     </foreignObject>
   </g>
@@ -41,12 +42,12 @@ export const Find = () => {
         <Tree
           data={pineIdChart}
           orientation="vertical"
-          separation={{nonSiblings: 3, siblings: 2}}
-          translate={{x: 750, y: 50}}
-          scaleExtent={{min: 0.7, max: 0.7}}
+          separation={{nonSiblings: 2, siblings: 2}}
+          translate={{x: 925, y: 50}}
+          zoomable={false}
+          initialDepth="0"
           //The renderCustomNodeElement prop accepts a custom render function that will be used for every node in the tree
-          renderCustomNodeElement=//rd3tNodeProps are props from the custom node line #9 and 10. rd3tNodeProps are the properties that are passed to the user-defined renderCustomNodeElement render function. Double check this understandiing.
-          {rd3tNodeProps =>
+          renderCustomNodeElement={rd3tNodeProps => //rd3tNodeProps are props from the custom node line #9 and 10. rd3tNodeProps are the properties that are passed to the user-defined renderCustomNodeElement render function. Double check this understandiing.
             renderRectSvgNode({...rd3tNodeProps, foreignObjectProps})
           }
           //Determines the spacing between parent & child nodes.
