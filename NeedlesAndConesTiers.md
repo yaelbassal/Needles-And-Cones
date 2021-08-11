@@ -20,17 +20,21 @@ As an administrator, I want to be able to:
 
 * have validated data to ensure reliability
 
-- i.e. each customer that creates an account should only be able to do so once with a single email address.
+- i.e. each user that creates an account should only be able to do so once with a single email address.
 
-* have full rights to make backend requests to add, edit, and remove products.
+As an engineer, I want to:
+
+* have a well-seeded database so that I am able to simulate a number of different scenarios
+* user data to be secure so that no one can unrightfully manipulate information.
+
+# Tier 2: MVP User Experience
+
+As an administrator, I want to be able to:
+
+* have full rights to make backend requests to add, edit, and remove users and their information.
 
 - No one else should have access.
 
 * view user information.
 
 - No one else should have access.
-
-As an engineer, I want to:
-
-* have a well-seeded database so that I am able to simulate a number of different scenarios
-* user data to be secure so that no one can unrightfully manipulate information.
