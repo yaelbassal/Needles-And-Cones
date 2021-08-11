@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import {ModalCloseButton} from './modal-close-button'
 
 class Modal extends Component {
   constructor(props) {
@@ -16,90 +17,79 @@ class Modal extends Component {
     const modalType = this.props.modalType
     if (!this.props.show) {
       return null
-    }
-    if (modalType === 'needles') {
-      const needles = this.props.props.props.needles_description
-      const needlesImage = this.props.props.props.needles_image
-      return (
-        <div className="modal">
-          <h3>NEEDLES</h3>
-          <img src={window.location.origin + needlesImage} />
-          <div>{needles}</div>
-          <button id="close-button" onClick={this.onClose}>
-            Close
-          </button>
-        </div>
-      )
-    }
-    if (modalType === 'cones') {
-      const cones = this.props.props.props.cones_description
-      const conesImage = this.props.props.props.cones_image
-      return (
-        <div className="modal">
-          <h3>CONES</h3>
-          <img src={window.location.origin + conesImage} />
-          <div>{cones}</div>
-          <button id="close-button" onClick={this.onClose}>
-            Close
-          </button>
-        </div>
-      )
-    }
-    if (modalType === 'twigs') {
-      const twigs = this.props.props.props.twigs_description
-      const twigsImage = this.props.props.props.twigs_image
-      return (
-        <div className="modal">
-          <h3>TWIGS</h3>
-          <img src={window.location.origin + twigsImage} />
-          <div>{twigs}</div>
-          <button id="close-button" onClick={this.onClose}>
-            Close
-          </button>
-        </div>
-      )
-    }
-    if (modalType === 'branches') {
-      const branches = this.props.props.props.branches_description
-      const branchesImage = this.props.props.props.branches_image
-      return (
-        <div className="modal">
-          <h3>BRANCHES</h3>
-          <img src={window.location.origin + branchesImage} />
-          <div>{branches}</div>
-          <button id="close-button" onClick={this.onClose}>
-            Close
-          </button>
-        </div>
-      )
-    }
-    if (modalType === 'bark') {
-      const bark = this.props.props.props.bark_description
-      const barkImage = this.props.props.props.bark_image
-      return (
-        <div className="modal">
-          <h3>BARK</h3>
-          <img src={window.location.origin + barkImage} />
-          <div>{bark}</div>
-          <button id="close-button" onClick={this.onClose}>
-            Close
-          </button>
-        </div>
-      )
-    }
-    if (modalType === 'shape') {
-      const shape = this.props.props.props.shape_description
-      const shapeImage = this.props.props.props.shape_image
-      return (
-        <div className="modal">
-          <h3>SHAPE</h3>
-          <img src={window.location.origin + shapeImage} />
-          <div>{shape}</div>
-          <button id="close-button" onClick={this.onClose}>
-            Close
-          </button>
-        </div>
-      )
+    } else {
+      if (modalType === 'needles') {
+        const needles = this.props.props.props.needles_description
+        const needlesImage = this.props.props.props.needles_image
+        return (
+          <div className="modal">
+            <h3>NEEDLES</h3>
+            <img src={window.location.origin + needlesImage} />
+            <div>{needles}</div>
+            <ModalCloseButton onClickFunc={this.onClose} />
+          </div>
+        )
+      }
+      if (modalType === 'cones') {
+        const cones = this.props.props.props.cones_description
+        const conesImage = this.props.props.props.cones_image
+        return (
+          <div className="modal">
+            <h3>CONES</h3>
+            <img src={window.location.origin + conesImage} />
+            <div>{cones}</div>
+            <ModalCloseButton onClickFunc={this.onClose} />
+          </div>
+        )
+      }
+      if (modalType === 'twigs') {
+        const twigs = this.props.props.props.twigs_description
+        const twigsImage = this.props.props.props.twigs_image
+        return (
+          <div className="modal">
+            <h3>TWIGS</h3>
+            <img src={window.location.origin + twigsImage} />
+            <div>{twigs}</div>
+            <ModalCloseButton onClickFunc={this.onClose} />
+          </div>
+        )
+      }
+      if (modalType === 'branches') {
+        const branches = this.props.props.props.branches_description
+        const branchesImage = this.props.props.props.branches_image
+        return (
+          <div className="modal">
+            <h3>BRANCHES</h3>
+            <img src={window.location.origin + branchesImage} />
+            <div>{branches}</div>
+            <ModalCloseButton onClickFunc={this.onClose} />
+          </div>
+        )
+      }
+      if (modalType === 'bark') {
+        const bark = this.props.props.props.bark_description
+        const barkImage = this.props.props.props.bark_image
+        return (
+          <div className="modal">
+            <h3>BARK</h3>
+            <img src={window.location.origin + barkImage} />
+            <div>{bark}</div>
+            <ModalCloseButton onClickFunc={this.onClose} />
+          </div>
+        )
+      }
+      if (modalType === 'shape') {
+        const shape = this.props.props.props.shape_description
+        const shapeImage = this.props.props.props.shape_image
+        return (
+          <div className="modal">
+            <h3>SHAPE</h3>
+            <img src={window.location.origin + shapeImage} />
+            <div>{shape}</div>
+            <ModalCloseButton onClickFunc={this.onClose} />
+          </div>
+        )
+      }
     }
   }
 }
