@@ -254,15 +254,21 @@ textarea {
   overflow-y: scroll;
 }
 
-/* ABOUT AND HOME COMPONENTS */
+/* ABOUT, FIND AND HOME COMPONENTS */
 
 .about-outer-container,
-.home-outer-container {
+.home-outer-container,
+.foreign-object {
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
     url(/images/background-image-learn-single-view.jpeg);
+}
+
+/* ABOUT AND HOME COMPONENTS */
+.about-outer-container,
+.home-outer-container {
   background-size: cover;
   height: 100vh;
 }
@@ -355,7 +361,7 @@ textarea {
 
 .foreign-object {
   border: 2px solid black;
-  background: #dedede;
+  color: black;
   text-align: center;
   margin: 10px;
 }
