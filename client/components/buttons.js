@@ -22,51 +22,29 @@ class Buttons extends Component {
   }
 
   render() {
+    const buttonValues = [
+      'needles',
+      'cones',
+      'twigs',
+      'branches',
+      'bark',
+      'shape'
+    ]
+
     return (
       <div>
         <div className="learn-buttons">
-          <button
-            className="toggle-button"
-            value="needles"
-            onClick={event => this.showModal(event)}
-          >
-            needles
-          </button>{' '}
-          <button
-            className="toggle-button"
-            value="cones"
-            onClick={event => this.showModal(event)}
-          >
-            cones
-          </button>{' '}
-          <button
-            className="toggle-button"
-            value="twigs"
-            onClick={event => this.showModal(event)}
-          >
-            twigs
-          </button>{' '}
-          <button
-            className="toggle-button"
-            value="branches"
-            onClick={event => this.showModal(event)}
-          >
-            branches
-          </button>{' '}
-          <button
-            className="toggle-button"
-            value="bark"
-            onClick={event => this.showModal(event)}
-          >
-            bark
-          </button>{' '}
-          <button
-            className="toggle-button"
-            value="shape"
-            onClick={event => this.showModal(event)}
-          >
-            shape
-          </button>{' '}
+          {buttonValues.map(val => (
+            <button
+              key={val}
+              className="toggle-button"
+              value={val}
+              onClick={event => this.showModal(event)}
+              type="button"
+            >
+              {val}
+            </button>
+          ))}
         </div>
         <Modal
           onClose={this.showModal}
