@@ -43,13 +43,13 @@ export const Find = () => {
           data={pineIdChart}
           orientation="vertical"
           separation={{nonSiblings: 2, siblings: 2}}
-          translate={{x: 925, y: 50}}
+          translate={{x: 890, y: 50}}
           zoomable={false}
           initialDepth="0"
           //The renderCustomNodeElement prop accepts a custom render function that will be used for every node in the tree
-          renderCustomNodeElement={rd3tNodeProps => //rd3tNodeProps are props from the custom node line #9 and 10. rd3tNodeProps are the properties that are passed to the user-defined renderCustomNodeElement render function. Double check this understandiing.
-            renderRectSvgNode({...rd3tNodeProps, foreignObjectProps})
-          }
+          renderCustomNodeElement={(
+            rd3tNodeProps //rd3tNodeProps are props from the custom node line #9 and 10. rd3tNodeProps are the properties that are passed to the user-defined renderCustomNodeElement render function. Double check this understandiing.
+          ) => renderRectSvgNode({...rd3tNodeProps, foreignObjectProps})}
           //Determines the spacing between parent & child nodes.
           depthFactor="200"
         />
